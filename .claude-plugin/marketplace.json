@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cc-plugins",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Curated collection of Claude Code skills and agents for enhanced development workflows",
   "owner": {
     "name": "Shane Dolley",
@@ -1164,7 +1164,11 @@
         "debugging-testing",
         "code-review-quality"
       ],
-      "requirements": ["git", "task-master", "lincli"]
+      "requirements": [
+        "git",
+        "task-master",
+        "lincli"
+      ]
     },
     {
       "name": "programming-languages",
@@ -1179,7 +1183,18 @@
         "typescript-pro",
         "prompt-engineer"
       ],
-      "requirements": ["go", "java", "mvn", "gradle", "node", "npm", "python", "pip", "poetry", "cargo"]
+      "requirements": [
+        "go",
+        "java",
+        "mvn",
+        "gradle",
+        "node",
+        "npm",
+        "python",
+        "pip",
+        "poetry",
+        "cargo"
+      ]
     },
     {
       "name": "architecture-design",
@@ -1192,7 +1207,11 @@
         "api-development",
         "ml-engineer"
       ],
-      "requirements": ["kubectl", "helm", "docker"]
+      "requirements": [
+        "kubectl",
+        "helm",
+        "docker"
+      ]
     },
     {
       "name": "git-version-control",
@@ -1208,7 +1227,13 @@
         "gitops-worktrees",
         "finish"
       ],
-      "requirements": ["git", "gh", "sops", "git-crypt", "gpg"]
+      "requirements": [
+        "git",
+        "gh",
+        "sops",
+        "git-crypt",
+        "gpg"
+      ]
     },
     {
       "name": "cicd-infrastructure",
@@ -1226,7 +1251,19 @@
         "observability-engineer",
         "performance-engineer"
       ],
-      "requirements": ["git", "gh", "docker", "kubectl", "helm", "argocd", "flux", "terraform", "az", "actionlint", "trivy"]
+      "requirements": [
+        "git",
+        "gh",
+        "docker",
+        "kubectl",
+        "helm",
+        "argocd",
+        "flux",
+        "terraform",
+        "az",
+        "actionlint",
+        "trivy"
+      ]
     },
     {
       "name": "code-review-quality",
@@ -1240,7 +1277,12 @@
         "security-auditor",
         "security-review"
       ],
-      "requirements": ["git", "gh", "docker", "trivy"]
+      "requirements": [
+        "git",
+        "gh",
+        "docker",
+        "trivy"
+      ]
     },
     {
       "name": "debugging-testing",
@@ -1270,7 +1312,9 @@
         "database-operations",
         "inventory-optimizer"
       ],
-      "requirements": ["supabase"]
+      "requirements": [
+        "supabase"
+      ]
     },
     {
       "name": "documentation-writing",
@@ -1300,7 +1344,13 @@
         "subagent-driven-development",
         "performance-profiling"
       ],
-      "requirements": ["git", "npm", "pip", "cargo", "go"]
+      "requirements": [
+        "git",
+        "npm",
+        "pip",
+        "cargo",
+        "go"
+      ]
     }
   ]
 }
