@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cc-plugins",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Curated collection of Claude Code skills and agents for enhanced development workflows",
   "owner": {
     "name": "Shane Dolley",
@@ -157,7 +157,9 @@
       "description": "Use when partner provides a complete implementation plan to execute in controlled batches with review checkpoints - loads plan, reviews critically, executes tasks in batches, reports for review between batches",
       "category": "core-workflow",
       "source": "./plugins/execute-plan",
-      "commands": ["./commands/execute-plan.md"],
+      "commands": [
+        "./commands/execute-plan.md"
+      ],
       "tags": [
         "executing",
         "plans",
@@ -180,7 +182,9 @@
       "description": "Branch completion workflow with user decision options",
       "category": "gitops",
       "source": "./plugins/finish",
-      "commands": ["./commands/finish.md"],
+      "commands": [
+        "./commands/finish.md"
+      ],
       "tags": [
         "gitops",
         "completion",
@@ -295,7 +299,9 @@
       "description": "ALWAYS USE THIS SKILL WHEN STARTING ANY KIND OF WORK, NO MATTER HOW TRIVIAL.  You have no memory between sessions and will reinvent solutions or repeat past mistakes UNLESS YOU USE THIS SKILL. Gives you perfect recall of all your past conversations and projects.",
       "category": "memory",
       "source": "./plugins/remember",
-      "commands": ["./commands/remember.md"],
+      "commands": [
+        "./commands/remember.md"
+      ],
       "tags": [
         "remembering",
         "conversations",
@@ -307,7 +313,9 @@
       "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements - dispatches superpowers:code-reviewer subagent to review implementation against plan or requirements before proceeding",
       "category": "code-review",
       "source": "./plugins/review",
-      "commands": ["./commands/review.md"],
+      "commands": [
+        "./commands/review.md"
+      ],
       "tags": [
         "requesting",
         "code",
@@ -321,7 +329,9 @@
       "description": "Use when reviewing any GitHub pull request - teammate PRs, external contributions, cross-team reviews, or self-review. Provides comprehensive analysis with flexible output modes via gh CLI.",
       "category": "code-review",
       "source": "./plugins/pr-review",
-      "commands": ["./commands/pr-review.md"],
+      "commands": [
+        "./commands/pr-review.md"
+      ],
       "tags": [
         "reviewing",
         "github",
@@ -336,7 +346,9 @@
       "description": "Use when errors occur deep in execution and you need to trace back to find the original trigger - systematically traces bugs backward through call stack, adding instrumentation when needed, to identify source of invalid data or incorrect behavior",
       "category": "debugging",
       "source": "./plugins/rca",
-      "commands": ["./commands/rca.md"],
+      "commands": [
+        "./commands/rca.md"
+      ],
       "tags": [
         "root",
         "cause",
@@ -383,7 +395,9 @@
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes - four-phase framework (root cause investigation, pattern analysis, hypothesis testing, implementation) that ensures understanding before attempting solutions",
       "category": "debugging",
       "source": "./plugins/debug",
-      "commands": ["./commands/debug.md"],
+      "commands": [
+        "./commands/debug.md"
+      ],
       "tags": [
         "systematic",
         "debugging"
@@ -405,7 +419,9 @@
       "description": "Initialize task-master and parse PRDs from docs/prds/ into actionable tasks with optional subtask generation",
       "category": "task-management",
       "source": "./plugins/taskmaster",
-      "commands": ["./commands/taskmaster.md"],
+      "commands": [
+        "./commands/taskmaster.md"
+      ],
       "tags": [
         "taskmaster",
         "workflow",
@@ -417,7 +433,9 @@
       "description": "Use when implementing any feature or bugfix, before writing implementation code - write the test first, watch it fail, write minimal code to pass; ensures tests actually verify behavior by requiring failure first",
       "category": "development",
       "source": "./plugins/tdd",
-      "commands": ["./commands/tdd.md"],
+      "commands": [
+        "./commands/tdd.md"
+      ],
       "tags": [
         "test",
         "driven",
@@ -453,7 +471,9 @@
       "description": "Orchestrate task-master task execution with TDD, code review, and worktree isolation",
       "category": "task-management",
       "source": "./plugins/tm-execute",
-      "commands": ["./commands/tm-execute.md"],
+      "commands": [
+        "./commands/tm-execute.md"
+      ],
       "tags": [
         "execute",
         "workflow",
@@ -465,7 +485,9 @@
       "description": "Complete task-master execution - verify, clean up, and handle branch completion",
       "category": "task-management",
       "source": "./plugins/tm-finish",
-      "commands": ["./commands/tm-finish.md"],
+      "commands": [
+        "./commands/tm-finish.md"
+      ],
       "tags": [
         "finish",
         "workflow",
@@ -477,7 +499,9 @@
       "description": "Dispatch implementation subagent for a task-master task with TDD enforcement for code tasks",
       "category": "task-management",
       "source": "./plugins/tm-implement",
-      "commands": ["./commands/tm-implement.md"],
+      "commands": [
+        "./commands/tm-implement.md"
+      ],
       "tags": [
         "implement",
         "workflow",
@@ -489,7 +513,9 @@
       "description": "Get and display the next task from task-master without executing it",
       "category": "task-management",
       "source": "./plugins/tm-next",
-      "commands": ["./commands/tm-next.md"],
+      "commands": [
+        "./commands/tm-next.md"
+      ],
       "tags": [
         "next",
         "workflow",
@@ -501,7 +527,9 @@
       "description": "Dispatch code reviewer subagent to review task implementation",
       "category": "task-management",
       "source": "./plugins/tm-review",
-      "commands": ["./commands/tm-review.md"],
+      "commands": [
+        "./commands/tm-review.md"
+      ],
       "tags": [
         "review",
         "workflow",
@@ -514,7 +542,9 @@
       "description": "Set up git worktree for a task-master parent task",
       "category": "task-management",
       "source": "./plugins/tm-worktree",
-      "commands": ["./commands/tm-worktree.md"],
+      "commands": [
+        "./commands/tm-worktree.md"
+      ],
       "tags": [
         "worktree",
         "workflow",
@@ -526,7 +556,9 @@
       "description": "Unified workflow for shaping features from idea to implementation - auto-scales discovery process based on complexity (TRIVIAL/SIMPLE/COMPLEX)",
       "category": "core-workflow",
       "source": "./plugins/shape",
-      "commands": ["./commands/shape.md"],
+      "commands": [
+        "./commands/shape.md"
+      ],
       "tags": [
         "unified",
         "shaping",
@@ -550,7 +582,9 @@
       "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
       "category": "verification",
       "source": "./plugins/verify",
-      "commands": ["./commands/verify.md"],
+      "commands": [
+        "./commands/verify.md"
+      ],
       "tags": [
         "verification",
         "before",
@@ -586,7 +620,9 @@
       "description": "Use when design is complete and you need detailed implementation tasks for engineers with zero codebase context - creates comprehensive implementation plans with exact file paths, complete code examples, and verification steps assuming engineer has minimal domain knowledge",
       "category": "core-workflow",
       "source": "./plugins/write-plan",
-      "commands": ["./commands/write-plan.md"],
+      "commands": [
+        "./commands/write-plan.md"
+      ],
       "tags": [
         "writing",
         "plans",
