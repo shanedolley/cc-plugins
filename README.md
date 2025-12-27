@@ -38,44 +38,310 @@ Many plugins include slash commands that invoke their skills:
 /review
 ```
 
-### Install Categories
+### Install by Category
 
-Categories are curated bundles of related plugins. Some categories have dependencies that are automatically installed:
+To batch-install plugins by category, add the relevant `enabledPlugins` entries to your `~/.claude/settings.json` file.
 
-```bash
-# Plan & Implement (16 plugins + auto-installs git, testing, review dependencies)
-/plugin install collection:plan-implement
+#### Plan & Implement (16 plugins)
 
-# Programming Languages (8 plugins)
-/plugin install collection:programming-languages
+Requires: `git`, `task-master`, `lincli` (see [External Dependencies](#external-dependencies))
 
-# Architecture & Design (6 plugins)
-/plugin install collection:architecture-design
-
-# Git & Version Control (9 plugins)
-/plugin install collection:git-version-control
-
-# CI/CD & Infrastructure (11 plugins)
-/plugin install collection:cicd-infrastructure
-
-# Code Review & Quality (7 plugins)
-/plugin install collection:code-review-quality
-
-# Debugging & Testing (11 plugins)
-/plugin install collection:debugging-testing
-
-# Data & Analytics (5 plugins)
-/plugin install collection:data-analytics
-
-# Documentation & Writing (4 plugins)
-/plugin install collection:documentation-writing
-
-# Memory & Search (2 plugins)
-/plugin install collection:memory-search
-
-# Utility (3 plugins)
-/plugin install collection:utility
+```json
+{
+  "enabledPlugins": {
+    "shape@cc-plugins": true,
+    "verify@cc-plugins": true,
+    "execute-plan@cc-plugins": true,
+    "write-plan@cc-plugins": true,
+    "using-superpowers@cc-plugins": true,
+    "task-classifier@cc-plugins": true,
+    "verification-runner@cc-plugins": true,
+    "taskmaster@cc-plugins": true,
+    "tm-execute@cc-plugins": true,
+    "tm-implement@cc-plugins": true,
+    "tm-review@cc-plugins": true,
+    "tm-finish@cc-plugins": true,
+    "tm-next@cc-plugins": true,
+    "tm-worktree@cc-plugins": true,
+    "linear-issue-manager@cc-plugins": true,
+    "linear-issue-updater@cc-plugins": true
+  }
+}
 ```
+
+#### Programming Languages (8 plugins)
+
+Requires: Language runtimes you'll use (`go`, `java`, `node`, `python`, `cargo`)
+
+```json
+{
+  "enabledPlugins": {
+    "golang-pro@cc-plugins": true,
+    "java-pro@cc-plugins": true,
+    "javascript-pro@cc-plugins": true,
+    "python-pro@cc-plugins": true,
+    "python-architect@cc-plugins": true,
+    "rust-pro@cc-plugins": true,
+    "typescript-pro@cc-plugins": true,
+    "prompt-engineer@cc-plugins": true
+  }
+}
+```
+
+#### Architecture & Design (6 plugins)
+
+Requires: `kubectl`, `helm`, `docker`
+
+```json
+{
+  "enabledPlugins": {
+    "architect@cc-plugins": true,
+    "architecture-decisions@cc-plugins": true,
+    "graphql-architect@cc-plugins": true,
+    "kubernetes-architect@cc-plugins": true,
+    "api-development@cc-plugins": true,
+    "ml-engineer@cc-plugins": true
+  }
+}
+```
+
+#### Git & Version Control (9 plugins)
+
+Requires: `git`, `gh`, `sops`, `git-crypt`, `gpg`
+
+```json
+{
+  "enabledPlugins": {
+    "gitops-engineer@cc-plugins": true,
+    "gitops-branching@cc-plugins": true,
+    "gitops-conflicts@cc-plugins": true,
+    "gitops-recovery@cc-plugins": true,
+    "gitops-release@cc-plugins": true,
+    "gitops-repo-structure@cc-plugins": true,
+    "gitops-secrets@cc-plugins": true,
+    "gitops-worktrees@cc-plugins": true,
+    "finish@cc-plugins": true
+  }
+}
+```
+
+#### CI/CD & Infrastructure (11 plugins)
+
+Requires: `git`, `gh`, `docker`, `kubectl`, `helm`, `argocd`, `flux`, `terraform`, `az`, `actionlint`, `trivy`
+
+```json
+{
+  "enabledPlugins": {
+    "ci-cd-engineer@cc-plugins": true,
+    "cicd-pipelines@cc-plugins": true,
+    "cicd-deployments@cc-plugins": true,
+    "cicd-feature-flags@cc-plugins": true,
+    "cicd-gitops-tools@cc-plugins": true,
+    "cicd-promotion@cc-plugins": true,
+    "cicd-release@cc-plugins": true,
+    "cicd-secrets-infra@cc-plugins": true,
+    "terraform-specialist@cc-plugins": true,
+    "observability-engineer@cc-plugins": true,
+    "performance-engineer@cc-plugins": true
+  }
+}
+```
+
+#### Code Review & Quality (7 plugins)
+
+Requires: `git`, `gh`, `docker`, `trivy`
+
+```json
+{
+  "enabledPlugins": {
+    "code-reviewer@cc-plugins": true,
+    "pr-review@cc-plugins": true,
+    "quality-reviewer@cc-plugins": true,
+    "review@cc-plugins": true,
+    "receiving-code-review@cc-plugins": true,
+    "security-auditor@cc-plugins": true,
+    "security-review@cc-plugins": true
+  }
+}
+```
+
+#### Debugging & Testing (11 plugins)
+
+No external dependencies required.
+
+```json
+{
+  "enabledPlugins": {
+    "tdd@cc-plugins": true,
+    "tdd-orchestrator@cc-plugins": true,
+    "debug@cc-plugins": true,
+    "debugger@cc-plugins": true,
+    "rca@cc-plugins": true,
+    "defense-in-depth@cc-plugins": true,
+    "condition-based-waiting@cc-plugins": true,
+    "testing-anti-patterns@cc-plugins": true,
+    "testing-skills-with-subagents@cc-plugins": true,
+    "error-detective@cc-plugins": true,
+    "test-analyst-expert@cc-plugins": true
+  }
+}
+```
+
+#### Data & Analytics (5 plugins)
+
+Requires: `supabase`
+
+```json
+{
+  "enabledPlugins": {
+    "data-scientist@cc-plugins": true,
+    "data-analyst-investigator@cc-plugins": true,
+    "database-optimizer@cc-plugins": true,
+    "database-operations@cc-plugins": true,
+    "inventory-optimizer@cc-plugins": true
+  }
+}
+```
+
+#### Documentation & Writing (4 plugins)
+
+No external dependencies required.
+
+```json
+{
+  "enabledPlugins": {
+    "technical-writer@cc-plugins": true,
+    "writing-clearly-and-concisely@cc-plugins": true,
+    "writing-skills@cc-plugins": true,
+    "sharing-skills@cc-plugins": true
+  }
+}
+```
+
+#### Memory & Search (2 plugins)
+
+No external dependencies required.
+
+```json
+{
+  "enabledPlugins": {
+    "remember@cc-plugins": true,
+    "search-conversations@cc-plugins": true
+  }
+}
+```
+
+#### Utility (3 plugins)
+
+Requires: `git`, `npm`, `pip`, `cargo`, `go`
+
+```json
+{
+  "enabledPlugins": {
+    "developer@cc-plugins": true,
+    "subagent-driven-development@cc-plugins": true,
+    "performance-profiling@cc-plugins": true
+  }
+}
+```
+
+#### Install All (82 plugins)
+
+To install everything, combine all entries above or use this complete list:
+
+<details>
+<summary>Click to expand full enabledPlugins for all 82 plugins</summary>
+
+```json
+{
+  "enabledPlugins": {
+    "shape@cc-plugins": true,
+    "verify@cc-plugins": true,
+    "execute-plan@cc-plugins": true,
+    "write-plan@cc-plugins": true,
+    "using-superpowers@cc-plugins": true,
+    "task-classifier@cc-plugins": true,
+    "verification-runner@cc-plugins": true,
+    "taskmaster@cc-plugins": true,
+    "tm-execute@cc-plugins": true,
+    "tm-implement@cc-plugins": true,
+    "tm-review@cc-plugins": true,
+    "tm-finish@cc-plugins": true,
+    "tm-next@cc-plugins": true,
+    "tm-worktree@cc-plugins": true,
+    "linear-issue-manager@cc-plugins": true,
+    "linear-issue-updater@cc-plugins": true,
+    "golang-pro@cc-plugins": true,
+    "java-pro@cc-plugins": true,
+    "javascript-pro@cc-plugins": true,
+    "python-pro@cc-plugins": true,
+    "python-architect@cc-plugins": true,
+    "rust-pro@cc-plugins": true,
+    "typescript-pro@cc-plugins": true,
+    "prompt-engineer@cc-plugins": true,
+    "architect@cc-plugins": true,
+    "architecture-decisions@cc-plugins": true,
+    "graphql-architect@cc-plugins": true,
+    "kubernetes-architect@cc-plugins": true,
+    "api-development@cc-plugins": true,
+    "ml-engineer@cc-plugins": true,
+    "gitops-engineer@cc-plugins": true,
+    "gitops-branching@cc-plugins": true,
+    "gitops-conflicts@cc-plugins": true,
+    "gitops-recovery@cc-plugins": true,
+    "gitops-release@cc-plugins": true,
+    "gitops-repo-structure@cc-plugins": true,
+    "gitops-secrets@cc-plugins": true,
+    "gitops-worktrees@cc-plugins": true,
+    "finish@cc-plugins": true,
+    "ci-cd-engineer@cc-plugins": true,
+    "cicd-pipelines@cc-plugins": true,
+    "cicd-deployments@cc-plugins": true,
+    "cicd-feature-flags@cc-plugins": true,
+    "cicd-gitops-tools@cc-plugins": true,
+    "cicd-promotion@cc-plugins": true,
+    "cicd-release@cc-plugins": true,
+    "cicd-secrets-infra@cc-plugins": true,
+    "terraform-specialist@cc-plugins": true,
+    "observability-engineer@cc-plugins": true,
+    "performance-engineer@cc-plugins": true,
+    "code-reviewer@cc-plugins": true,
+    "pr-review@cc-plugins": true,
+    "quality-reviewer@cc-plugins": true,
+    "review@cc-plugins": true,
+    "receiving-code-review@cc-plugins": true,
+    "security-auditor@cc-plugins": true,
+    "security-review@cc-plugins": true,
+    "tdd@cc-plugins": true,
+    "tdd-orchestrator@cc-plugins": true,
+    "debug@cc-plugins": true,
+    "debugger@cc-plugins": true,
+    "rca@cc-plugins": true,
+    "defense-in-depth@cc-plugins": true,
+    "condition-based-waiting@cc-plugins": true,
+    "testing-anti-patterns@cc-plugins": true,
+    "testing-skills-with-subagents@cc-plugins": true,
+    "error-detective@cc-plugins": true,
+    "test-analyst-expert@cc-plugins": true,
+    "data-scientist@cc-plugins": true,
+    "data-analyst-investigator@cc-plugins": true,
+    "database-optimizer@cc-plugins": true,
+    "database-operations@cc-plugins": true,
+    "inventory-optimizer@cc-plugins": true,
+    "technical-writer@cc-plugins": true,
+    "writing-clearly-and-concisely@cc-plugins": true,
+    "writing-skills@cc-plugins": true,
+    "sharing-skills@cc-plugins": true,
+    "remember@cc-plugins": true,
+    "search-conversations@cc-plugins": true,
+    "developer@cc-plugins": true,
+    "subagent-driven-development@cc-plugins": true,
+    "performance-profiling@cc-plugins": true
+  }
+}
+```
+
+</details>
 
 ## Available Categories
 
