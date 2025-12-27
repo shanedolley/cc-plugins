@@ -1,0 +1,17 @@
+{
+  "name": "linear-issue-updater",
+  "version": "1.0.0",
+  "description": "Use when the user requests to update or sync Linear issues after completing design, planning, or implementation work. Handles attaching documents, updating status/estimates, linking issues, and adding progress comments. Triggered by phrases like \"update Linear\", \"sync Linear issue\", or after completing workflow stages.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "task-management",
+  "license": "MIT",
+  "keywords": [
+    "linear",
+    "issue",
+    "updater",
+    "task management"
+  ]
+}

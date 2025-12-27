@@ -1,0 +1,19 @@
+{
+  "name": "reviewing-github-prs",
+  "version": "1.0.0",
+  "description": "Use when reviewing any GitHub pull request - teammate PRs, external contributions, cross-team reviews, or self-review. Provides comprehensive analysis with flexible output modes via gh CLI.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "code-review",
+  "license": "MIT",
+  "keywords": [
+    "reviewing",
+    "github",
+    "prs",
+    "code review",
+    "git",
+    "code-review"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "gitops-recovery",
+  "version": "1.0.0",
+  "description": "Complex git operations with safety measures (rebase, bisect, cherry-pick, stash)",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "recovery",
+    "git"
+  ],
+  "dependencies": [
+    "verification-runner"
+  ]
+}

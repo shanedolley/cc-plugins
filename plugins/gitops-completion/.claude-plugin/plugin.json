@@ -1,0 +1,16 @@
+{
+  "name": "gitops-completion",
+  "version": "1.0.0",
+  "description": "Branch completion workflow with user decision options",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "completion",
+    "git"
+  ]
+}

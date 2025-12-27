@@ -1,0 +1,16 @@
+{
+  "name": "subagent-driven-development",
+  "version": "1.0.0",
+  "description": "Use when executing implementation plans with independent tasks in the current session - dispatches fresh subagent for each task with code review between tasks, enabling fast iteration with quality gates",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "development",
+  "license": "MIT",
+  "keywords": [
+    "subagent",
+    "driven",
+    "development"
+  ]
+}

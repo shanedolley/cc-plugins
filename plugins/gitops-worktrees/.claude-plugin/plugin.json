@@ -1,0 +1,16 @@
+{
+  "name": "gitops-worktrees",
+  "version": "1.0.0",
+  "description": "Worktree creation, setup, and cleanup with project detection",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "worktrees",
+    "git"
+  ]
+}

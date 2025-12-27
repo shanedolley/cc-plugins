@@ -1,0 +1,15 @@
+{
+  "name": "developer",
+  "version": "1.0.0",
+  "description": "Implements your specs with tests - delegate for writing code",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "development",
+  "license": "MIT",
+  "keywords": [
+    "developer",
+    "development"
+  ]
+}

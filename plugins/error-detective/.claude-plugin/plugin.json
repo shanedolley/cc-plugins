@@ -1,0 +1,16 @@
+{
+  "name": "error-detective",
+  "version": "1.0.0",
+  "description": "Search logs and codebases for error patterns, stack traces, and anomalies. Correlates errors across systems and identifies root causes. Use PROACTIVELY when debugging issues, analyzing logs, or investigating production errors.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "code-quality",
+  "license": "MIT",
+  "keywords": [
+    "error",
+    "detective",
+    "code quality"
+  ]
+}

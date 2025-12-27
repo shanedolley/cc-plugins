@@ -1,0 +1,19 @@
+{
+  "name": "api-development",
+  "version": "1.0.0",
+  "description": "Systematic workflows for API design (spec-first), documentation, versioning, and contract testing.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "operations",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "development",
+    "operations"
+  ],
+  "dependencies": [
+    "verification-runner"
+  ]
+}

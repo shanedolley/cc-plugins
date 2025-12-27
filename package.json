@@ -1,0 +1,24 @@
+{
+  "name": "claude-plugins",
+  "version": "1.0.0",
+  "description": "Curated collection of Claude Code skills and agents",
+  "author": "Shane Dolley <shane@shanedolley.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "validate:marketplace": "node scripts/validate.js --marketplace-only",
+    "validate:plugins": "node scripts/validate.js --plugins-only",
+    "migrate": "node scripts/migrate.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "chalk": "^5.3.0",
+    "glob": "^10.3.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

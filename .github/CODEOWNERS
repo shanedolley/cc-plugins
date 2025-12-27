@@ -1,0 +1,16 @@
+# Claude Plugins Marketplace CODEOWNERS
+#
+# These owners will be requested for review when PRs are opened
+# that modify the matching files.
+
+# Default owner for everything
+* @shanedolley
+
+# Marketplace configuration requires admin approval
+.claude-plugin/marketplace.json @shanedolley
+
+# CI/CD configuration requires admin approval
+.github/ @shanedolley
+
+# Validation scripts require admin approval
+scripts/ @shanedolley

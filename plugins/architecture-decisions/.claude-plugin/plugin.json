@@ -1,0 +1,16 @@
+{
+  "name": "architecture-decisions",
+  "version": "1.0.0",
+  "description": "Document architectural decisions using ADRs with alternatives analysis, trade-offs, and decision rationale.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "quality-gates",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "decisions",
+    "quality gates"
+  ]
+}

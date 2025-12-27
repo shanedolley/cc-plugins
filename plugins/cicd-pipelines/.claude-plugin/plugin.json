@@ -1,0 +1,17 @@
+{
+  "name": "cicd-pipelines",
+  "version": "1.0.0",
+  "description": "Pipeline creation, debugging, and management for GitHub Actions, Azure Pipelines, and Jenkins",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "cicd",
+  "license": "MIT",
+  "keywords": [
+    "cicd",
+    "pipelines",
+    "ci/cd",
+    "automation"
+  ]
+}

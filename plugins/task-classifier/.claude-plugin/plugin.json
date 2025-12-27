@@ -1,0 +1,16 @@
+{
+  "name": "task-classifier",
+  "version": "1.0.0",
+  "description": "Intelligently analyze tasks and route to the most appropriate specialized agent based on task content and project context.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "foundation",
+  "license": "MIT",
+  "keywords": [
+    "task",
+    "classifier",
+    "foundation"
+  ]
+}

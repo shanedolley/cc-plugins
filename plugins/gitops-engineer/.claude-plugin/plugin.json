@@ -1,0 +1,16 @@
+{
+  "name": "gitops-engineer",
+  "version": "1.0.0",
+  "description": "Centralized agent for all git operations, repository management, and version control",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "engineer",
+    "git"
+  ]
+}

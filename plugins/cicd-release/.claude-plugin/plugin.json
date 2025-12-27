@@ -1,0 +1,17 @@
+{
+  "name": "cicd-release",
+  "version": "1.0.0",
+  "description": "Tag-triggered release pipeline execution and artifact publishing",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "cicd",
+  "license": "MIT",
+  "keywords": [
+    "cicd",
+    "release",
+    "ci/cd",
+    "automation"
+  ]
+}

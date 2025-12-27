@@ -1,0 +1,16 @@
+{
+  "name": "data-analyst-investigator",
+  "version": "1.0.0",
+  "description": "Use this agent when you need deep analytical investigation of data patterns, anomalies, or business problems. Examples include: analyzing unexpected drops in metrics, investigating data quality issues, identifying outliers in datasets, conducting post-incident analysis of system failures, exploring correlations between variables, validating assumptions in data models, or when you need someone to challenge your conclusions and find potential blind spots in your analysis.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "data",
+  "license": "MIT",
+  "keywords": [
+    "data",
+    "analyst",
+    "investigator"
+  ]
+}

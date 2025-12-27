@@ -1,0 +1,18 @@
+{
+  "name": "writing-clearly-and-concisely",
+  "version": "1.0.0",
+  "description": "Apply Strunk's timeless writing rules to ANY prose humans will read—documentation, commit messages, error messages, explanations, reports, or UI text. Makes your writing clearer, stronger, and more professional.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "documentation",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "clearly",
+    "and",
+    "concisely",
+    "documentation"
+  ]
+}

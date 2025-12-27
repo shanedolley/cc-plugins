@@ -1,0 +1,25 @@
+# test-analyst-expert
+
+Use this agent when you need comprehensive testing analysis and detailed reporting. Examples: <example>Context: User has written a new authentication module and needs thorough testing analysis. user: 'I've implemented a new login system with JWT tokens. Can you analyze what testing should be done?' assistant: 'I'll use the test-analyst-expert agent to perform comprehensive testing analysis and provide detailed findings.' <commentary>Since the user needs testing analysis, use the test-analyst-expert agent to analyze testing requirements and provide detailed recommendations.</commentary></example> <example>Context: User has completed a feature and wants testing validation before deployment. user: 'The payment processing feature is complete. What testing coverage do we have?' assistant: 'Let me engage the test-analyst-expert agent to analyze the testing coverage and provide detailed analysis.' <commentary>The user needs testing analysis for a completed feature, so use the test-analyst-expert agent to evaluate coverage and provide comprehensive findings.</commentary></example>
+
+## Installation
+
+```bash
+/plugin install test-analyst-expert
+```
+
+## Usage
+
+Invoke this agent using the Task tool with `subagent_type="test-analyst-expert"`.
+
+## Category
+
+testing
+
+## Author
+
+Shane Dolley ([@shanedolley](https://github.com/shanedolley))
+
+## License
+
+MIT

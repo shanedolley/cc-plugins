@@ -1,0 +1,19 @@
+{
+  "name": "performance-profiling",
+  "version": "1.0.0",
+  "description": "Performance analysis, profiling, and optimization workflows with measurement-first approach.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "quality-gates",
+  "license": "MIT",
+  "keywords": [
+    "performance",
+    "profiling",
+    "quality gates"
+  ],
+  "dependencies": [
+    "verification-runner"
+  ]
+}

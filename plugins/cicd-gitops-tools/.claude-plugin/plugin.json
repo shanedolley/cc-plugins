@@ -1,0 +1,19 @@
+{
+  "name": "cicd-gitops-tools",
+  "version": "1.0.0",
+  "description": "ArgoCD and Flux configuration for GitOps-based continuous deployment",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "cicd",
+  "license": "MIT",
+  "keywords": [
+    "cicd",
+    "gitops",
+    "tools",
+    "ci/cd",
+    "git",
+    "automation"
+  ]
+}

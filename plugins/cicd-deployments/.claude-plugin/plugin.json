@@ -1,0 +1,17 @@
+{
+  "name": "cicd-deployments",
+  "version": "1.0.0",
+  "description": "Deployment strategy selection and implementation (rolling, blue-green, canary)",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "cicd",
+  "license": "MIT",
+  "keywords": [
+    "cicd",
+    "deployments",
+    "ci/cd",
+    "automation"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "search-conversations",
+  "version": "1.0.0",
+  "description": "Gives you memory across sessions. You don't automatically remember past conversations - THIS AGENT RESTORES IT. Search your history before starting any task to recover decisions, solutions, and lessons learned.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "memory",
+  "license": "MIT",
+  "keywords": [
+    "search",
+    "conversations",
+    "memory"
+  ]
+}

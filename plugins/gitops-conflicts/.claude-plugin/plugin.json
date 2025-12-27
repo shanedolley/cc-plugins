@@ -1,0 +1,16 @@
+{
+  "name": "gitops-conflicts",
+  "version": "1.0.0",
+  "description": "Conflict resolution with classification and escalation",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "conflicts",
+    "git"
+  ]
+}

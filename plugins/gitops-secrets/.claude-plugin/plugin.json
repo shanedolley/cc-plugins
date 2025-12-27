@@ -1,0 +1,16 @@
+{
+  "name": "gitops-secrets",
+  "version": "1.0.0",
+  "description": "Repository-level secrets encryption with SOPS and GitCrypt",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "secrets",
+    "git"
+  ]
+}

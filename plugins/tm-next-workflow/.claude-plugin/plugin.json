@@ -1,0 +1,16 @@
+{
+  "name": "tm-next-workflow",
+  "version": "1.0.0",
+  "description": "Get and display the next task from task-master without executing it",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "task-management",
+  "license": "MIT",
+  "keywords": [
+    "next",
+    "workflow",
+    "task management"
+  ]
+}

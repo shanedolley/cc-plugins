@@ -1,0 +1,17 @@
+{
+  "name": "gitops-repo-structure",
+  "version": "1.0.0",
+  "description": "Repository structure detection and pattern recommendations",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "repo",
+    "structure",
+    "git"
+  ]
+}

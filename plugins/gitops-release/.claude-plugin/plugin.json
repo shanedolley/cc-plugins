@@ -1,0 +1,16 @@
+{
+  "name": "gitops-release",
+  "version": "1.0.0",
+  "description": "Release preparation with version bump, changelog, and tagging",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "gitops",
+  "license": "MIT",
+  "keywords": [
+    "gitops",
+    "release",
+    "git"
+  ]
+}

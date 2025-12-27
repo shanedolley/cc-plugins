@@ -1,0 +1,16 @@
+{
+  "name": "writing-skills",
+  "version": "1.0.0",
+  "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "documentation",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "skills",
+    "documentation"
+  ]
+}

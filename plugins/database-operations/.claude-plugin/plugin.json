@@ -1,0 +1,18 @@
+{
+  "name": "database-operations",
+  "version": "1.0.0",
+  "description": "Systematic workflows for database schema changes, migrations, query optimization, and dependency analysis. Includes Supabase MCP integration.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "operations",
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "operations"
+  ],
+  "dependencies": [
+    "verification-runner"
+  ]
+}

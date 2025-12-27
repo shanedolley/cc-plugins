@@ -1,0 +1,17 @@
+{
+  "name": "quality-reviewer",
+  "version": "1.0.0",
+  "description": "Reviews code for real issues (security, data loss, performance)",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "code-quality",
+  "license": "MIT",
+  "keywords": [
+    "quality",
+    "reviewer",
+    "code quality",
+    "code-review"
+  ]
+}

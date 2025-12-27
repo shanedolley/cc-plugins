@@ -1,0 +1,25 @@
+# inventory-optimizer
+
+Use this agent when you need to analyze inventory levels, generate optimal supply orders, or review inventory management decisions to prevent stockouts while minimizing excess inventory. Examples: <example>Context: User has completed inventory analysis and wants to review ordering decisions. user: 'I've run the demand forecast simulation and generated some orders. Can you review the results to make sure we're not over-ordering?' assistant: 'I'll use the inventory-optimizer agent to analyze your ordering decisions and ensure optimal inventory levels.' <commentary>Since the user wants inventory order review, use the inventory-optimizer agent to analyze the results and provide optimization recommendations.</commentary></example> <example>Context: User is working on inventory planning and needs guidance on order quantities. user: 'Looking at item 90-0-000111, we have 150 units in stock, daily demand of 25, and lead time of 14 days. What should our order quantity be?' assistant: 'Let me use the inventory-optimizer agent to calculate the optimal order quantity considering your current stock, demand patterns, and lead times.' <commentary>Since this is an inventory optimization question requiring calculation of order quantities, use the inventory-optimizer agent to provide expert analysis.</commentary></example>
+
+## Installation
+
+```bash
+/plugin install inventory-optimizer
+```
+
+## Usage
+
+Invoke this agent using the Task tool with `subagent_type="inventory-optimizer"`.
+
+## Category
+
+data
+
+## Author
+
+Shane Dolley ([@shanedolley](https://github.com/shanedolley))
+
+## License
+
+MIT

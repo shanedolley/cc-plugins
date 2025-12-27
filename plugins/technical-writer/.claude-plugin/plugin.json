@@ -1,0 +1,16 @@
+{
+  "name": "technical-writer",
+  "version": "1.0.0",
+  "description": "Creates documentation - use after feature completion",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "documentation",
+  "license": "MIT",
+  "keywords": [
+    "technical",
+    "writer",
+    "documentation"
+  ]
+}

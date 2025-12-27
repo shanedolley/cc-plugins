@@ -1,0 +1,25 @@
+# linear-issue-manager
+
+Use this agent when you need to update, enhance, or create Linear issues with comprehensive information. Specifically:\n\n- After creating a plan with /superpowers:brainstorm or /superpowers:write-plan that should be attached to an issue\n- When a user mentions creating or updating a Linear issue and you need to ensure all relevant fields are populated\n- When a user describes work that should be tracked in Linear and you need to create a properly structured issue\n- When reviewing existing issues that need better organization, estimates, or context\n- When a user completes a significant task and you need to update the corresponding Linear issue with outcomes\n\nExamples:\n\nExample 1:\nuser: "I just finished brainstorming the authentication redesign using /superpowers:brainstorm. Can you create a Linear issue for this?"\nassistant: "I'll use the Task tool to launch the linear-issue-manager agent to create a comprehensive Linear issue with the brainstorming plan attached."\n<uses Agent tool with linear-issue-manager>\n\nExample 2:\nuser: "We need to track the API refactoring work in Linear"\nassistant: "Let me use the linear-issue-manager agent to create a well-structured Linear issue with appropriate priority, estimates, and labels."\n<uses Agent tool with linear-issue-manager>\n\nExample 3:\nuser: "I used /superpowers:write-plan to plan out the database migration. Let's get this in Linear."\nassistant: "I'll use the linear-issue-manager agent to create a Linear issue and attach your migration plan to it."\n<uses Agent tool with linear-issue-manager>\n\nExample 4:\nuser: "Can you update LIN-123 with the results of our testing?"\nassistant: "I'll use the linear-issue-manager agent to update that issue with comprehensive testing results and adjust priority/status as needed."\n<uses Agent tool with linear-issue-manager>
+
+## Installation
+
+```bash
+/plugin install linear-issue-manager
+```
+
+## Usage
+
+Invoke this agent using the Task tool with `subagent_type="linear-issue-manager"`.
+
+## Category
+
+integration
+
+## Author
+
+Shane Dolley ([@shanedolley](https://github.com/shanedolley))
+
+## License
+
+MIT

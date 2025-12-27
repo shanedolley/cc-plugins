@@ -1,0 +1,15 @@
+{
+  "name": "architect",
+  "version": "1.0.0",
+  "description": "Lead architect - analyzes code, designs solutions, writes ADRs",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "architecture",
+  "license": "MIT",
+  "keywords": [
+    "architect",
+    "architecture"
+  ]
+}

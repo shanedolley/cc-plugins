@@ -1,0 +1,989 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-plugins",
+  "version": "1.0.0",
+  "description": "Curated collection of Claude Code skills and agents for enhanced development workflows",
+  "owner": {
+    "name": "Shane Dolley",
+    "github": "shanedolley",
+    "email": "shane@shanedolley.com"
+  },
+  "plugins": [
+    {
+      "name": "api-development",
+      "description": "Systematic workflows for API design (spec-first), documentation, versioning, and contract testing.",
+      "category": "operations",
+      "source": "./plugins/api-development",
+      "tags": [
+        "api",
+        "development",
+        "operations"
+      ]
+    },
+    {
+      "name": "architecture-decisions",
+      "description": "Document architectural decisions using ADRs with alternatives analysis, trade-offs, and decision rationale.",
+      "category": "quality-gates",
+      "source": "./plugins/architecture-decisions",
+      "tags": [
+        "architecture",
+        "decisions",
+        "quality gates"
+      ]
+    },
+    {
+      "name": "cicd-deployments",
+      "description": "Deployment strategy selection and implementation (rolling, blue-green, canary)",
+      "category": "cicd",
+      "source": "./plugins/cicd-deployments",
+      "tags": [
+        "cicd",
+        "deployments",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "cicd-feature-flags",
+      "description": "Feature flag management with PostHog for progressive rollout",
+      "category": "cicd",
+      "source": "./plugins/cicd-feature-flags",
+      "tags": [
+        "cicd",
+        "feature",
+        "flags",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "cicd-gitops-tools",
+      "description": "ArgoCD and Flux configuration for GitOps-based continuous deployment",
+      "category": "cicd",
+      "source": "./plugins/cicd-gitops-tools",
+      "tags": [
+        "cicd",
+        "gitops",
+        "tools",
+        "ci/cd",
+        "git",
+        "automation"
+      ]
+    },
+    {
+      "name": "cicd-pipelines",
+      "description": "Pipeline creation, debugging, and management for GitHub Actions, Azure Pipelines, and Jenkins",
+      "category": "cicd",
+      "source": "./plugins/cicd-pipelines",
+      "tags": [
+        "cicd",
+        "pipelines",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "cicd-promotion",
+      "description": "Environment promotion pipelines with approval gates",
+      "category": "cicd",
+      "source": "./plugins/cicd-promotion",
+      "tags": [
+        "cicd",
+        "promotion",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "cicd-release",
+      "description": "Tag-triggered release pipeline execution and artifact publishing",
+      "category": "cicd",
+      "source": "./plugins/cicd-release",
+      "tags": [
+        "cicd",
+        "release",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "cicd-secrets-infra",
+      "description": "Infrastructure secrets management with External Secrets Operator",
+      "category": "cicd",
+      "source": "./plugins/cicd-secrets-infra",
+      "tags": [
+        "cicd",
+        "secrets",
+        "infra",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "condition-based-waiting",
+      "description": "Use when tests have race conditions, timing dependencies, or inconsistent pass/fail behavior - replaces arbitrary timeouts with condition polling to wait for actual state changes, eliminating flaky tests from timing guesses",
+      "category": "testing",
+      "source": "./plugins/condition-based-waiting",
+      "tags": [
+        "condition",
+        "based",
+        "waiting",
+        "testing"
+      ]
+    },
+    {
+      "name": "database-operations",
+      "description": "Systematic workflows for database schema changes, migrations, query optimization, and dependency analysis. Includes Supabase MCP integration.",
+      "category": "operations",
+      "source": "./plugins/database-operations",
+      "tags": [
+        "database",
+        "operations"
+      ]
+    },
+    {
+      "name": "defense-in-depth",
+      "description": "Use when invalid data causes failures deep in execution, requiring validation at multiple system layers - validates at every layer data passes through to make bugs structurally impossible",
+      "category": "debugging",
+      "source": "./plugins/defense-in-depth",
+      "tags": [
+        "defense",
+        "depth",
+        "debugging"
+      ]
+    },
+    {
+      "name": "executing-plans",
+      "description": "Use when partner provides a complete implementation plan to execute in controlled batches with review checkpoints - loads plan, reviews critically, executes tasks in batches, reports for review between batches",
+      "category": "core-workflow",
+      "source": "./plugins/executing-plans",
+      "tags": [
+        "executing",
+        "plans",
+        "core workflow"
+      ]
+    },
+    {
+      "name": "gitops-branching",
+      "description": "Branching strategy selection, enforcement, and documentation",
+      "category": "gitops",
+      "source": "./plugins/gitops-branching",
+      "tags": [
+        "gitops",
+        "branching",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-completion",
+      "description": "Branch completion workflow with user decision options",
+      "category": "gitops",
+      "source": "./plugins/gitops-completion",
+      "tags": [
+        "gitops",
+        "completion",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-conflicts",
+      "description": "Conflict resolution with classification and escalation",
+      "category": "gitops",
+      "source": "./plugins/gitops-conflicts",
+      "tags": [
+        "gitops",
+        "conflicts",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-recovery",
+      "description": "Complex git operations with safety measures (rebase, bisect, cherry-pick, stash)",
+      "category": "gitops",
+      "source": "./plugins/gitops-recovery",
+      "tags": [
+        "gitops",
+        "recovery",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-release",
+      "description": "Release preparation with version bump, changelog, and tagging",
+      "category": "gitops",
+      "source": "./plugins/gitops-release",
+      "tags": [
+        "gitops",
+        "release",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-repo-structure",
+      "description": "Repository structure detection and pattern recommendations",
+      "category": "gitops",
+      "source": "./plugins/gitops-repo-structure",
+      "tags": [
+        "gitops",
+        "repo",
+        "structure",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-secrets",
+      "description": "Repository-level secrets encryption with SOPS and GitCrypt",
+      "category": "gitops",
+      "source": "./plugins/gitops-secrets",
+      "tags": [
+        "gitops",
+        "secrets",
+        "git"
+      ]
+    },
+    {
+      "name": "gitops-worktrees",
+      "description": "Worktree creation, setup, and cleanup with project detection",
+      "category": "gitops",
+      "source": "./plugins/gitops-worktrees",
+      "tags": [
+        "gitops",
+        "worktrees",
+        "git"
+      ]
+    },
+    {
+      "name": "linear-issue-updater",
+      "description": "Use when the user requests to update or sync Linear issues after completing design, planning, or implementation work. Handles attaching documents, updating status/estimates, linking issues, and adding progress comments. Triggered by phrases like \"update Linear\", \"sync Linear issue\", or after completing workflow stages.",
+      "category": "task-management",
+      "source": "./plugins/linear-issue-updater",
+      "tags": [
+        "linear",
+        "issue",
+        "updater",
+        "task management"
+      ]
+    },
+    {
+      "name": "performance-profiling",
+      "description": "Performance analysis, profiling, and optimization workflows with measurement-first approach.",
+      "category": "quality-gates",
+      "source": "./plugins/performance-profiling",
+      "tags": [
+        "performance",
+        "profiling",
+        "quality gates"
+      ]
+    },
+    {
+      "name": "receiving-code-review",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+      "category": "code-review",
+      "source": "./plugins/receiving-code-review",
+      "tags": [
+        "receiving",
+        "code",
+        "review",
+        "code review",
+        "code-review"
+      ]
+    },
+    {
+      "name": "remembering-conversations",
+      "description": "ALWAYS USE THIS SKILL WHEN STARTING ANY KIND OF WORK, NO MATTER HOW TRIVIAL.  You have no memory between sessions and will reinvent solutions or repeat past mistakes UNLESS YOU USE THIS SKILL. Gives you perfect recall of all your past conversations and projects.",
+      "category": "memory",
+      "source": "./plugins/remembering-conversations",
+      "tags": [
+        "remembering",
+        "conversations",
+        "memory"
+      ]
+    },
+    {
+      "name": "requesting-code-review",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements - dispatches superpowers:code-reviewer subagent to review implementation against plan or requirements before proceeding",
+      "category": "code-review",
+      "source": "./plugins/requesting-code-review",
+      "tags": [
+        "requesting",
+        "code",
+        "review",
+        "code review",
+        "code-review"
+      ]
+    },
+    {
+      "name": "reviewing-github-prs",
+      "description": "Use when reviewing any GitHub pull request - teammate PRs, external contributions, cross-team reviews, or self-review. Provides comprehensive analysis with flexible output modes via gh CLI.",
+      "category": "code-review",
+      "source": "./plugins/reviewing-github-prs",
+      "tags": [
+        "reviewing",
+        "github",
+        "prs",
+        "code review",
+        "git",
+        "code-review"
+      ]
+    },
+    {
+      "name": "root-cause-tracing",
+      "description": "Use when errors occur deep in execution and you need to trace back to find the original trigger - systematically traces bugs backward through call stack, adding instrumentation when needed, to identify source of invalid data or incorrect behavior",
+      "category": "debugging",
+      "source": "./plugins/root-cause-tracing",
+      "tags": [
+        "root",
+        "cause",
+        "tracing",
+        "debugging"
+      ]
+    },
+    {
+      "name": "security-review",
+      "description": "Security-focused code review with OWASP Top 10 checklist, dependency scanning, and secret detection.",
+      "category": "quality-gates",
+      "source": "./plugins/security-review",
+      "tags": [
+        "security",
+        "review",
+        "quality gates",
+        "code-review"
+      ]
+    },
+    {
+      "name": "sharing-skills",
+      "description": "Use when you've developed a broadly useful skill and want to contribute it upstream via pull request - guides process of branching, committing, pushing, and creating PR to contribute skills back to upstream repository",
+      "category": "documentation",
+      "source": "./plugins/sharing-skills",
+      "tags": [
+        "sharing",
+        "skills",
+        "documentation"
+      ]
+    },
+    {
+      "name": "subagent-driven-development",
+      "description": "Use when executing implementation plans with independent tasks in the current session - dispatches fresh subagent for each task with code review between tasks, enabling fast iteration with quality gates",
+      "category": "development",
+      "source": "./plugins/subagent-driven-development",
+      "tags": [
+        "subagent",
+        "driven",
+        "development"
+      ]
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes - four-phase framework (root cause investigation, pattern analysis, hypothesis testing, implementation) that ensures understanding before attempting solutions",
+      "category": "debugging",
+      "source": "./plugins/systematic-debugging",
+      "tags": [
+        "systematic",
+        "debugging"
+      ]
+    },
+    {
+      "name": "task-classifier",
+      "description": "Intelligently analyze tasks and route to the most appropriate specialized agent based on task content and project context.",
+      "category": "foundation",
+      "source": "./plugins/task-classifier",
+      "tags": [
+        "task",
+        "classifier",
+        "foundation"
+      ]
+    },
+    {
+      "name": "taskmaster-workflow",
+      "description": "Initialize task-master and parse PRDs from docs/prds/ into actionable tasks with optional subtask generation",
+      "category": "task-management",
+      "source": "./plugins/taskmaster-workflow",
+      "tags": [
+        "taskmaster",
+        "workflow",
+        "task management"
+      ]
+    },
+    {
+      "name": "test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code - write the test first, watch it fail, write minimal code to pass; ensures tests actually verify behavior by requiring failure first",
+      "category": "development",
+      "source": "./plugins/test-driven-development",
+      "tags": [
+        "test",
+        "driven",
+        "development",
+        "testing"
+      ]
+    },
+    {
+      "name": "testing-anti-patterns",
+      "description": "Use when writing or changing tests, adding mocks, or tempted to add test-only methods to production code - prevents testing mock behavior, production pollution with test-only methods, and mocking without understanding dependencies",
+      "category": "testing",
+      "source": "./plugins/testing-anti-patterns",
+      "tags": [
+        "testing",
+        "anti",
+        "patterns"
+      ]
+    },
+    {
+      "name": "testing-skills-with-subagents",
+      "description": "Use when creating or editing skills, before deployment, to verify they work under pressure and resist rationalization - applies RED-GREEN-REFACTOR cycle to process documentation by running baseline without skill, writing to address failures, iterating to close loopholes",
+      "category": "testing",
+      "source": "./plugins/testing-skills-with-subagents",
+      "tags": [
+        "testing",
+        "skills",
+        "with",
+        "subagents"
+      ]
+    },
+    {
+      "name": "tm-execute-workflow",
+      "description": "Orchestrate task-master task execution with TDD, code review, and worktree isolation",
+      "category": "task-management",
+      "source": "./plugins/tm-execute-workflow",
+      "tags": [
+        "execute",
+        "workflow",
+        "task management"
+      ]
+    },
+    {
+      "name": "tm-finish-workflow",
+      "description": "Complete task-master execution - verify, clean up, and handle branch completion",
+      "category": "task-management",
+      "source": "./plugins/tm-finish-workflow",
+      "tags": [
+        "finish",
+        "workflow",
+        "task management"
+      ]
+    },
+    {
+      "name": "tm-implement-workflow",
+      "description": "Dispatch implementation subagent for a task-master task with TDD enforcement for code tasks",
+      "category": "task-management",
+      "source": "./plugins/tm-implement-workflow",
+      "tags": [
+        "implement",
+        "workflow",
+        "task management"
+      ]
+    },
+    {
+      "name": "tm-next-workflow",
+      "description": "Get and display the next task from task-master without executing it",
+      "category": "task-management",
+      "source": "./plugins/tm-next-workflow",
+      "tags": [
+        "next",
+        "workflow",
+        "task management"
+      ]
+    },
+    {
+      "name": "tm-review-workflow",
+      "description": "Dispatch code reviewer subagent to review task implementation",
+      "category": "task-management",
+      "source": "./plugins/tm-review-workflow",
+      "tags": [
+        "review",
+        "workflow",
+        "task management",
+        "code-review"
+      ]
+    },
+    {
+      "name": "tm-worktree-workflow",
+      "description": "Set up git worktree for a task-master parent task",
+      "category": "task-management",
+      "source": "./plugins/tm-worktree-workflow",
+      "tags": [
+        "worktree",
+        "workflow",
+        "task management"
+      ]
+    },
+    {
+      "name": "unified-shaping-workflow",
+      "description": "Unified workflow for shaping features from idea to implementation - auto-scales discovery process based on complexity (TRIVIAL/SIMPLE/COMPLEX)",
+      "category": "core-workflow",
+      "source": "./plugins/unified-shaping-workflow",
+      "tags": [
+        "unified",
+        "shaping",
+        "workflow",
+        "core workflow"
+      ]
+    },
+    {
+      "name": "using-superpowers",
+      "description": "Use when starting any conversation - establishes mandatory workflows for finding and using skills, including using Skill tool before announcing usage, following brainstorming before coding, and creating TodoWrite todos for checklists",
+      "category": "core-workflow",
+      "source": "./plugins/using-superpowers",
+      "tags": [
+        "using",
+        "superpowers",
+        "core workflow"
+      ]
+    },
+    {
+      "name": "verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "category": "verification",
+      "source": "./plugins/verification-before-completion",
+      "tags": [
+        "verification",
+        "before",
+        "completion"
+      ]
+    },
+    {
+      "name": "verification-runner",
+      "description": "Run verification commands (test, lint, build) in read-only mode with structured output. Prevents orchestrator scope creep from verification into fixing.",
+      "category": "foundation",
+      "source": "./plugins/verification-runner",
+      "tags": [
+        "verification",
+        "runner",
+        "foundation"
+      ]
+    },
+    {
+      "name": "writing-clearly-and-concisely",
+      "description": "Apply Strunk's timeless writing rules to ANY prose humans will read—documentation, commit messages, error messages, explanations, reports, or UI text. Makes your writing clearer, stronger, and more professional.",
+      "category": "documentation",
+      "source": "./plugins/writing-clearly-and-concisely",
+      "tags": [
+        "writing",
+        "clearly",
+        "and",
+        "concisely",
+        "documentation"
+      ]
+    },
+    {
+      "name": "writing-plans",
+      "description": "Use when design is complete and you need detailed implementation tasks for engineers with zero codebase context - creates comprehensive implementation plans with exact file paths, complete code examples, and verification steps assuming engineer has minimal domain knowledge",
+      "category": "core-workflow",
+      "source": "./plugins/writing-plans",
+      "tags": [
+        "writing",
+        "plans",
+        "core workflow"
+      ]
+    },
+    {
+      "name": "writing-skills",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization",
+      "category": "documentation",
+      "source": "./plugins/writing-skills",
+      "tags": [
+        "writing",
+        "skills",
+        "documentation"
+      ]
+    },
+    {
+      "name": "architect",
+      "description": "Lead architect - analyzes code, designs solutions, writes ADRs",
+      "category": "architecture",
+      "source": "./plugins/architect",
+      "tags": [
+        "architect",
+        "architecture"
+      ]
+    },
+    {
+      "name": "ci-cd-engineer",
+      "description": "Centralized agent for all pipeline, deployment, and automation operations",
+      "category": "cicd",
+      "source": "./plugins/ci-cd-engineer",
+      "tags": [
+        "engineer",
+        "ci/cd",
+        "automation"
+      ]
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Use this agent when a major project step has been completed and needs to be reviewed against the original plan and coding standards. Examples: <example>Context: The user is creating a code-review agent that should be called after a logical chunk of code is written. user: \"I've finished implementing the user authentication system as outlined in step 3 of our plan\" assistant: \"Great work! Now let me use the code-reviewer agent to review the implementation against our plan and coding standards\" <commentary>Since a major project step has been completed, use the code-reviewer agent to validate the work against the plan and identify any issues.</commentary></example> <example>Context: User has completed a significant feature implementation. user: \"The API endpoints for the task management system are now complete - that covers step 2 from our architecture document\" assistant: \"Excellent! Let me have the code-reviewer agent examine this implementation to ensure it aligns with our plan and follows best practices\" <commentary>A numbered step from the planning document has been completed, so the code-reviewer agent should review the work.</commentary></example>",
+      "category": "code-quality",
+      "source": "./plugins/code-reviewer",
+      "tags": [
+        "code",
+        "reviewer",
+        "code quality",
+        "code-review"
+      ]
+    },
+    {
+      "name": "data-analyst-investigator",
+      "description": "Use this agent when you need deep analytical investigation of data patterns, anomalies, or business problems. Examples include: analyzing unexpected drops in metrics, investigating data quality issues, identifying outliers in datasets, conducting post-incident analysis of system failures, exploring correlations between variables, validating assumptions in data models, or when you need someone to challenge your conclusions and find potential blind spots in your analysis.",
+      "category": "data",
+      "source": "./plugins/data-analyst-investigator",
+      "tags": [
+        "data",
+        "analyst",
+        "investigator"
+      ]
+    },
+    {
+      "name": "data-scientist",
+      "description": "Expert data scientist for advanced analytics, machine learning, and statistical modeling. Handles complex data analysis, predictive modeling, and business intelligence. Use PROACTIVELY for data analysis tasks, ML modeling, statistical analysis, and data-driven insights.",
+      "category": "data",
+      "source": "./plugins/data-scientist",
+      "tags": [
+        "data",
+        "scientist"
+      ]
+    },
+    {
+      "name": "database-optimizer",
+      "description": "Expert database optimizer specializing in modern performance tuning, query optimization, and scalable architectures. Masters advanced indexing, N+1 resolution, multi-tier caching, partitioning strategies, and cloud database optimization. Handles complex query analysis, migration strategies, and performance monitoring. Use PROACTIVELY for database optimization, performance issues, or scalability challenges.",
+      "category": "data",
+      "source": "./plugins/database-optimizer",
+      "tags": [
+        "database",
+        "optimizer",
+        "data"
+      ]
+    },
+    {
+      "name": "debugger",
+      "description": "Analyzes bugs through systematic evidence gathering - use for complex debugging",
+      "category": "code-quality",
+      "source": "./plugins/debugger",
+      "tags": [
+        "debugger",
+        "code quality",
+        "debugging"
+      ]
+    },
+    {
+      "name": "developer",
+      "description": "Implements your specs with tests - delegate for writing code",
+      "category": "development",
+      "source": "./plugins/developer",
+      "tags": [
+        "developer",
+        "development"
+      ]
+    },
+    {
+      "name": "error-detective",
+      "description": "Search logs and codebases for error patterns, stack traces, and anomalies. Correlates errors across systems and identifies root causes. Use PROACTIVELY when debugging issues, analyzing logs, or investigating production errors.",
+      "category": "code-quality",
+      "source": "./plugins/error-detective",
+      "tags": [
+        "error",
+        "detective",
+        "code quality"
+      ]
+    },
+    {
+      "name": "gitops-engineer",
+      "description": "Centralized agent for all git operations, repository management, and version control",
+      "category": "gitops",
+      "source": "./plugins/gitops-engineer",
+      "tags": [
+        "gitops",
+        "engineer",
+        "git"
+      ]
+    },
+    {
+      "name": "golang-pro",
+      "description": "Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices. Expert in the latest Go ecosystem including generics, workspaces, and cutting-edge frameworks. Use PROACTIVELY for Go development, architecture design, or performance optimization.",
+      "category": "development",
+      "source": "./plugins/golang-pro",
+      "tags": [
+        "golang",
+        "pro",
+        "development"
+      ]
+    },
+    {
+      "name": "graphql-architect",
+      "description": "Master modern GraphQL with federation, performance optimization, and enterprise security. Build scalable schemas, implement advanced caching, and design real-time systems. Use PROACTIVELY for GraphQL architecture or performance optimization.",
+      "category": "architecture",
+      "source": "./plugins/graphql-architect",
+      "tags": [
+        "graphql",
+        "architect",
+        "architecture"
+      ]
+    },
+    {
+      "name": "inventory-optimizer",
+      "description": "Use this agent when you need to analyze inventory levels, generate optimal supply orders, or review inventory management decisions to prevent stockouts while minimizing excess inventory. Examples: <example>Context: User has completed inventory analysis and wants to review ordering decisions. user: 'I've run the demand forecast simulation and generated some orders. Can you review the results to make sure we're not over-ordering?' assistant: 'I'll use the inventory-optimizer agent to analyze your ordering decisions and ensure optimal inventory levels.' <commentary>Since the user wants inventory order review, use the inventory-optimizer agent to analyze the results and provide optimization recommendations.</commentary></example> <example>Context: User is working on inventory planning and needs guidance on order quantities. user: 'Looking at item 90-0-000111, we have 150 units in stock, daily demand of 25, and lead time of 14 days. What should our order quantity be?' assistant: 'Let me use the inventory-optimizer agent to calculate the optimal order quantity considering your current stock, demand patterns, and lead times.' <commentary>Since this is an inventory optimization question requiring calculation of order quantities, use the inventory-optimizer agent to provide expert analysis.</commentary></example>",
+      "category": "data",
+      "source": "./plugins/inventory-optimizer",
+      "tags": [
+        "inventory",
+        "optimizer",
+        "data"
+      ]
+    },
+    {
+      "name": "java-pro",
+      "description": "Master Java 21+ with modern features like virtual threads, pattern matching, and Spring Boot 3.x. Expert in the latest Java ecosystem including GraalVM, Project Loom, and cloud-native patterns. Use PROACTIVELY for Java development, microservices architecture, or performance optimization.",
+      "category": "development",
+      "source": "./plugins/java-pro",
+      "tags": [
+        "java",
+        "pro",
+        "development"
+      ]
+    },
+    {
+      "name": "javascript-pro",
+      "description": "Master modern JavaScript with ES6+, async patterns, and Node.js APIs. Handles promises, event loops, and browser/Node compatibility. Use PROACTIVELY for JavaScript optimization, async debugging, or complex JS patterns.",
+      "category": "development",
+      "source": "./plugins/javascript-pro",
+      "tags": [
+        "javascript",
+        "pro",
+        "development"
+      ]
+    },
+    {
+      "name": "kubernetes-architect",
+      "description": "Expert Kubernetes architect specializing in cloud-native infrastructure, advanced GitOps workflows (ArgoCD/Flux), and enterprise container orchestration. Masters EKS/AKS/GKE, service mesh (Istio/Linkerd), progressive delivery, multi-tenancy, and platform engineering. Handles security, observability, cost optimization, and developer experience. Use PROACTIVELY for K8s architecture, GitOps implementation, or cloud-native platform design.",
+      "category": "infrastructure",
+      "source": "./plugins/kubernetes-architect",
+      "tags": [
+        "kubernetes",
+        "architect",
+        "infrastructure"
+      ]
+    },
+    {
+      "name": "linear-issue-manager",
+      "description": "Use this agent when you need to update, enhance, or create Linear issues with comprehensive information. Specifically:\\n\\n- After creating a plan with /superpowers:brainstorm or /superpowers:write-plan that should be attached to an issue\\n- When a user mentions creating or updating a Linear issue and you need to ensure all relevant fields are populated\\n- When a user describes work that should be tracked in Linear and you need to create a properly structured issue\\n- When reviewing existing issues that need better organization, estimates, or context\\n- When a user completes a significant task and you need to update the corresponding Linear issue with outcomes\\n\\nExamples:\\n\\nExample 1:\\nuser: \"I just finished brainstorming the authentication redesign using /superpowers:brainstorm. Can you create a Linear issue for this?\"\\nassistant: \"I'll use the Task tool to launch the linear-issue-manager agent to create a comprehensive Linear issue with the brainstorming plan attached.\"\\n<uses Agent tool with linear-issue-manager>\\n\\nExample 2:\\nuser: \"We need to track the API refactoring work in Linear\"\\nassistant: \"Let me use the linear-issue-manager agent to create a well-structured Linear issue with appropriate priority, estimates, and labels.\"\\n<uses Agent tool with linear-issue-manager>\\n\\nExample 3:\\nuser: \"I used /superpowers:write-plan to plan out the database migration. Let's get this in Linear.\"\\nassistant: \"I'll use the linear-issue-manager agent to create a Linear issue and attach your migration plan to it.\"\\n<uses Agent tool with linear-issue-manager>\\n\\nExample 4:\\nuser: \"Can you update LIN-123 with the results of our testing?\"\\nassistant: \"I'll use the linear-issue-manager agent to update that issue with comprehensive testing results and adjust priority/status as needed.\"\\n<uses Agent tool with linear-issue-manager>",
+      "category": "integration",
+      "source": "./plugins/linear-issue-manager",
+      "tags": [
+        "linear",
+        "issue",
+        "manager",
+        "integration"
+      ]
+    },
+    {
+      "name": "ml-engineer",
+      "description": "Build production ML systems with PyTorch 2.x, TensorFlow, and modern ML frameworks. Implements model serving, feature engineering, A/B testing, and monitoring. Use PROACTIVELY for ML model deployment, inference optimization, or production ML infrastructure.",
+      "category": "ai-ml",
+      "source": "./plugins/ml-engineer",
+      "tags": [
+        "engineer",
+        "ai/ml"
+      ]
+    },
+    {
+      "name": "observability-engineer",
+      "description": "Build production-ready monitoring, logging, and tracing systems. Implements comprehensive observability strategies, SLI/SLO management, and incident response workflows. Use PROACTIVELY for monitoring infrastructure, performance optimization, or production reliability.",
+      "category": "operations",
+      "source": "./plugins/observability-engineer",
+      "tags": [
+        "observability",
+        "engineer",
+        "operations"
+      ]
+    },
+    {
+      "name": "performance-engineer",
+      "description": "Expert performance engineer specializing in modern observability, application optimization, and scalable system performance. Masters OpenTelemetry, distributed tracing, load testing, multi-tier caching, Core Web Vitals, and performance monitoring. Handles end-to-end optimization, real user monitoring, and scalability patterns. Use PROACTIVELY for performance optimization, observability, or scalability challenges.",
+      "category": "operations",
+      "source": "./plugins/performance-engineer",
+      "tags": [
+        "performance",
+        "engineer",
+        "operations"
+      ]
+    },
+    {
+      "name": "prompt-engineer",
+      "description": "Expert prompt engineer specializing in advanced prompting techniques, LLM optimization, and AI system design. Masters chain-of-thought, constitutional AI, and production prompt strategies. Use when building AI features, improving agent performance, or crafting system prompts.",
+      "category": "ai-ml",
+      "source": "./plugins/prompt-engineer",
+      "tags": [
+        "prompt",
+        "engineer",
+        "ai/ml"
+      ]
+    },
+    {
+      "name": "python-architect",
+      "description": "Use this agent when you need to design, implement, or refactor Python code with complex requirements. Examples: <example>Context: User needs to build a data processing pipeline with multiple stages and error handling. user: 'I need to create a system that processes CSV files, validates data, transforms it, and outputs to different formats based on business rules' assistant: 'I'll use the python-architect agent to break down these requirements and design a comprehensive solution' <commentary>The user has complex requirements that need systematic breakdown and implementation, perfect for the python-architect agent.</commentary></example> <example>Context: User is struggling with a complex algorithm implementation. user: 'I'm trying to implement a distributed cache with TTL, LRU eviction, and thread safety but I'm not sure how to structure it' assistant: 'Let me engage the python-architect agent to analyze these requirements and design a robust solution' <commentary>This involves multiple complex requirements that need careful architectural planning and detailed implementation.</commentary></example>",
+      "category": "architecture",
+      "source": "./plugins/python-architect",
+      "tags": [
+        "python",
+        "architect",
+        "architecture"
+      ]
+    },
+    {
+      "name": "python-pro",
+      "description": "Master Python 3.12+ with modern features, async programming, performance optimization, and production-ready practices. Expert in the latest Python ecosystem including uv, ruff, pydantic, and FastAPI. Use PROACTIVELY for Python development, optimization, or advanced Python patterns.",
+      "category": "development",
+      "source": "./plugins/python-pro",
+      "tags": [
+        "python",
+        "pro",
+        "development"
+      ]
+    },
+    {
+      "name": "quality-reviewer",
+      "description": "Reviews code for real issues (security, data loss, performance)",
+      "category": "code-quality",
+      "source": "./plugins/quality-reviewer",
+      "tags": [
+        "quality",
+        "reviewer",
+        "code quality",
+        "code-review"
+      ]
+    },
+    {
+      "name": "rust-pro",
+      "description": "Master Rust 1.75+ with modern async patterns, advanced type system features, and production-ready systems programming. Expert in the latest Rust ecosystem including Tokio, axum, and cutting-edge crates. Use PROACTIVELY for Rust development, performance optimization, or systems programming.",
+      "category": "development",
+      "source": "./plugins/rust-pro",
+      "tags": [
+        "rust",
+        "pro",
+        "development"
+      ]
+    },
+    {
+      "name": "search-conversations",
+      "description": "Gives you memory across sessions. You don't automatically remember past conversations - THIS AGENT RESTORES IT. Search your history before starting any task to recover decisions, solutions, and lessons learned.",
+      "category": "memory",
+      "source": "./plugins/search-conversations",
+      "tags": [
+        "search",
+        "conversations",
+        "memory"
+      ]
+    },
+    {
+      "name": "security-auditor",
+      "description": "Expert security auditor specializing in DevSecOps, comprehensive cybersecurity, and compliance frameworks. Masters vulnerability assessment, threat modeling, secure authentication (OAuth2/OIDC), OWASP standards, cloud security, and security automation. Handles DevSecOps integration, compliance (GDPR/HIPAA/SOC2), and incident response. Use PROACTIVELY for security audits, DevSecOps, or compliance implementation.",
+      "category": "security",
+      "source": "./plugins/security-auditor",
+      "tags": [
+        "security",
+        "auditor"
+      ]
+    },
+    {
+      "name": "tdd-orchestrator",
+      "description": "Master TDD orchestrator specializing in red-green-refactor discipline, multi-agent workflow coordination, and comprehensive test-driven development practices. Enforces TDD best practices across teams with AI-assisted testing and modern frameworks. Use PROACTIVELY for TDD implementation and governance.",
+      "category": "testing",
+      "source": "./plugins/tdd-orchestrator",
+      "tags": [
+        "tdd",
+        "orchestrator",
+        "testing"
+      ]
+    },
+    {
+      "name": "technical-writer",
+      "description": "Creates documentation - use after feature completion",
+      "category": "documentation",
+      "source": "./plugins/technical-writer",
+      "tags": [
+        "technical",
+        "writer",
+        "documentation"
+      ]
+    },
+    {
+      "name": "terraform-specialist",
+      "description": "Expert Terraform/OpenTofu specialist mastering advanced IaC automation, state management, and enterprise infrastructure patterns. Handles complex module design, multi-cloud deployments, GitOps workflows, policy as code, and CI/CD integration. Covers migration strategies, security best practices, and modern IaC ecosystems. Use PROACTIVELY for advanced IaC, state management, or infrastructure automation.",
+      "category": "infrastructure",
+      "source": "./plugins/terraform-specialist",
+      "tags": [
+        "terraform",
+        "specialist",
+        "infrastructure"
+      ]
+    },
+    {
+      "name": "test-analyst-expert",
+      "description": "Use this agent when you need comprehensive testing analysis and detailed reporting. Examples: <example>Context: User has written a new authentication module and needs thorough testing analysis. user: 'I've implemented a new login system with JWT tokens. Can you analyze what testing should be done?' assistant: 'I'll use the test-analyst-expert agent to perform comprehensive testing analysis and provide detailed findings.' <commentary>Since the user needs testing analysis, use the test-analyst-expert agent to analyze testing requirements and provide detailed recommendations.</commentary></example> <example>Context: User has completed a feature and wants testing validation before deployment. user: 'The payment processing feature is complete. What testing coverage do we have?' assistant: 'Let me engage the test-analyst-expert agent to analyze the testing coverage and provide detailed analysis.' <commentary>The user needs testing analysis for a completed feature, so use the test-analyst-expert agent to evaluate coverage and provide comprehensive findings.</commentary></example>",
+      "category": "testing",
+      "source": "./plugins/test-analyst-expert",
+      "tags": [
+        "test",
+        "analyst",
+        "expert",
+        "testing"
+      ]
+    },
+    {
+      "name": "typescript-pro",
+      "description": "Master TypeScript with advanced types, generics, and strict type safety. Handles complex type systems, decorators, and enterprise-grade patterns. Use PROACTIVELY for TypeScript architecture, type inference optimization, or advanced typing patterns.",
+      "category": "development",
+      "source": "./plugins/typescript-pro",
+      "tags": [
+        "typescript",
+        "pro",
+        "development"
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "name": "essential",
+      "description": "Core development workflow plugins for everyday use",
+      "plugins": [
+        "developer",
+        "systematic-debugging",
+        "test-driven-development",
+        "requesting-code-review",
+        "architect"
+      ]
+    },
+    {
+      "name": "devops",
+      "description": "CI/CD, GitOps, and infrastructure automation plugins",
+      "plugins": [
+        "cicd-pipelines",
+        "cicd-deployments",
+        "cicd-release",
+        "gitops-branching",
+        "gitops-worktrees",
+        "gitops-completion",
+        "gitops-engineer"
+      ]
+    },
+    {
+      "name": "testing",
+      "description": "Test-driven development and quality assurance plugins",
+      "plugins": [
+        "test-driven-development",
+        "testing-anti-patterns",
+        "test-analyst-expert",
+        "verification-before-completion",
+        "verification-runner"
+      ]
+    },
+    {
+      "name": "debugging",
+      "description": "Debugging, troubleshooting, and root cause analysis plugins",
+      "plugins": [
+        "systematic-debugging",
+        "debugger",
+        "root-cause-tracing",
+        "condition-based-waiting",
+        "defense-in-depth"
+      ]
+    }
+  ]
+}

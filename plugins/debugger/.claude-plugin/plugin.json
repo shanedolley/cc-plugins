@@ -1,0 +1,16 @@
+{
+  "name": "debugger",
+  "version": "1.0.0",
+  "description": "Analyzes bugs through systematic evidence gathering - use for complex debugging",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "code-quality",
+  "license": "MIT",
+  "keywords": [
+    "debugger",
+    "code quality",
+    "debugging"
+  ]
+}

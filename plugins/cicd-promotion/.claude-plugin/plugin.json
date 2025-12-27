@@ -1,0 +1,17 @@
+{
+  "name": "cicd-promotion",
+  "version": "1.0.0",
+  "description": "Environment promotion pipelines with approval gates",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "cicd",
+  "license": "MIT",
+  "keywords": [
+    "cicd",
+    "promotion",
+    "ci/cd",
+    "automation"
+  ]
+}

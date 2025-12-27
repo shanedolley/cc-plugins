@@ -1,0 +1,20 @@
+{
+  "name": "security-review",
+  "version": "1.0.0",
+  "description": "Security-focused code review with OWASP Top 10 checklist, dependency scanning, and secret detection.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "quality-gates",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "review",
+    "quality gates",
+    "code-review"
+  ],
+  "dependencies": [
+    "verification-runner"
+  ]
+}

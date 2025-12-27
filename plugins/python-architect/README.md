@@ -1,0 +1,25 @@
+# python-architect
+
+Use this agent when you need to design, implement, or refactor Python code with complex requirements. Examples: <example>Context: User needs to build a data processing pipeline with multiple stages and error handling. user: 'I need to create a system that processes CSV files, validates data, transforms it, and outputs to different formats based on business rules' assistant: 'I'll use the python-architect agent to break down these requirements and design a comprehensive solution' <commentary>The user has complex requirements that need systematic breakdown and implementation, perfect for the python-architect agent.</commentary></example> <example>Context: User is struggling with a complex algorithm implementation. user: 'I'm trying to implement a distributed cache with TTL, LRU eviction, and thread safety but I'm not sure how to structure it' assistant: 'Let me engage the python-architect agent to analyze these requirements and design a robust solution' <commentary>This involves multiple complex requirements that need careful architectural planning and detailed implementation.</commentary></example>
+
+## Installation
+
+```bash
+/plugin install python-architect
+```
+
+## Usage
+
+Invoke this agent using the Task tool with `subagent_type="python-architect"`.
+
+## Category
+
+architecture
+
+## Author
+
+Shane Dolley ([@shanedolley](https://github.com/shanedolley))
+
+## License
+
+MIT

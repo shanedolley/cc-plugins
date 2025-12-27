@@ -1,0 +1,16 @@
+{
+  "name": "ci-cd-engineer",
+  "version": "1.0.0",
+  "description": "Centralized agent for all pipeline, deployment, and automation operations",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "cicd",
+  "license": "MIT",
+  "keywords": [
+    "engineer",
+    "ci/cd",
+    "automation"
+  ]
+}

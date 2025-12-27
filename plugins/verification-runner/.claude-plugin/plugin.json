@@ -1,0 +1,16 @@
+{
+  "name": "verification-runner",
+  "version": "1.0.0",
+  "description": "Run verification commands (test, lint, build) in read-only mode with structured output. Prevents orchestrator scope creep from verification into fixing.",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "foundation",
+  "license": "MIT",
+  "keywords": [
+    "verification",
+    "runner",
+    "foundation"
+  ]
+}
