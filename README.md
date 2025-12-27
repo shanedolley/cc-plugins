@@ -1,4 +1,4 @@
-# Claude Plugins Marketplace
+# CC Plugins Marketplace
 
 A curated collection of Claude Code skills and agents for enhanced development workflows.
 
@@ -7,7 +7,7 @@ A curated collection of Claude Code skills and agents for enhanced development w
 ### Add This Marketplace
 
 ```bash
-/plugin marketplace add shanedolley/claude-plugins
+/plugin marketplace add shanedolley/cc-plugins
 ```
 
 ### Install Individual Plugins
@@ -18,6 +18,24 @@ A curated collection of Claude Code skills and agents for enhanced development w
 
 # Install multiple plugins
 /plugin install developer architect debugger
+```
+
+### Slash Commands
+
+Many plugins include slash commands that invoke their skills:
+
+```bash
+# Debug with systematic four-phase framework
+/debug
+
+# Run TDD workflow
+/tdd
+
+# Shape an idea into implementation
+/shape
+
+# Review implementation against plan
+/review
 ```
 
 ### Install Collections
@@ -45,9 +63,9 @@ Collections are curated bundles of related plugins:
 Core development workflow plugins for everyday use:
 
 - `developer` - Implements your specs with tests
-- `systematic-debugging` - Four-phase debugging framework
-- `test-driven-development` - TDD enforcement (RED-GREEN-REFACTOR)
-- `requesting-code-review` - Code review dispatch
+- `debug` - Four-phase debugging framework (`/debug`)
+- `tdd` - TDD enforcement RED-GREEN-REFACTOR (`/tdd`)
+- `review` - Code review dispatch (`/review`)
 - `architect` - Analyzes code, designs solutions, writes ADRs
 
 ### DevOps
@@ -59,26 +77,26 @@ CI/CD, GitOps, and infrastructure automation:
 - `cicd-release` - Tag-triggered release automation
 - `gitops-branching` - Branching strategy selection
 - `gitops-worktrees` - Isolated git worktrees
-- `gitops-completion` - Work completion guidance
+- `finish` - Work completion guidance (`/finish`)
 - `gitops-engineer` - Git operations agent
 
 ### Testing
 
 Test-driven development and quality assurance:
 
-- `test-driven-development` - TDD enforcement
+- `tdd` - TDD enforcement (`/tdd`)
 - `testing-anti-patterns` - Prevent testing bad practices
 - `test-analyst-expert` - Comprehensive testing analysis
-- `verification-before-completion` - Verify before claiming done
+- `verify` - Verify before claiming done (`/verify`)
 - `verification-runner` - Run verification commands
 
 ### Debugging
 
 Debugging, troubleshooting, and root cause analysis:
 
-- `systematic-debugging` - Evidence-based debugging
+- `debug` - Evidence-based debugging (`/debug`)
 - `debugger` - Complex debugging agent
-- `root-cause-tracing` - Trace bugs to source
+- `rca` - Trace bugs to source (`/rca`)
 - `condition-based-waiting` - Fix race conditions
 - `defense-in-depth` - Multi-layer validation
 
@@ -100,9 +118,9 @@ Debugging, troubleshooting, and root cause analysis:
 | condition-based-waiting | Fix race conditions | verification |
 | database-operations | Schema changes, migrations | database |
 | defense-in-depth | Multi-layer validation | verification |
-| executing-plans | Execute plans in batches | core-workflow |
+| execute-plan | Execute plans in batches (`/execute-plan`) | core-workflow |
 | gitops-branching | Branching strategy | gitops |
-| gitops-completion | Work completion guidance | gitops |
+| finish | Work completion guidance (`/finish`) | gitops |
 | gitops-conflicts | Conflict resolution | gitops |
 | gitops-recovery | Complex git operations | gitops |
 | gitops-release | Release preparation | gitops |
@@ -112,31 +130,31 @@ Debugging, troubleshooting, and root cause analysis:
 | linear-issue-updater | Update Linear issues | task-management |
 | performance-profiling | Performance analysis | development |
 | receiving-code-review | Handle code review feedback | code-review |
-| remembering-conversations | Session memory | memory |
-| requesting-code-review | Request code review | code-review |
-| reviewing-github-prs | GitHub PR review | code-review |
-| root-cause-tracing | Trace bugs to source | debugging |
+| remember | Session memory (`/remember`) | memory |
+| review | Request code review (`/review`) | code-review |
+| pr-review | GitHub PR review (`/pr-review`) | code-review |
+| rca | Trace bugs to source (`/rca`) | debugging |
 | security-review | Security-focused review | security |
 | sharing-skills | Contribute skills upstream | core-workflow |
 | subagent-driven-development | Dispatch subagents | core-workflow |
-| systematic-debugging | Four-phase debugging | debugging |
+| debug | Four-phase debugging (`/debug`) | debugging |
 | task-classifier | Route tasks to agents | task-management |
-| taskmaster-workflow | Initialize task-master | task-management |
-| test-driven-development | TDD enforcement | testing |
+| taskmaster | Initialize task-master (`/taskmaster`) | task-management |
+| tdd | TDD enforcement (`/tdd`) | testing |
 | testing-anti-patterns | Prevent bad testing | testing |
 | testing-skills-with-subagents | Test skills with subagents | testing |
-| tm-execute-workflow | Task execution orchestration | task-management |
-| tm-finish-workflow | Complete task execution | task-management |
-| tm-implement-workflow | Task implementation | task-management |
-| tm-next-workflow | Get next task | task-management |
-| tm-review-workflow | Task review | task-management |
-| tm-worktree-workflow | Task worktree setup | task-management |
-| unified-shaping-workflow | Shape ideas to implementation | core-workflow |
+| tm-execute | Task execution orchestration (`/tm-execute`) | task-management |
+| tm-finish | Complete task execution (`/tm-finish`) | task-management |
+| tm-implement | Task implementation (`/tm-implement`) | task-management |
+| tm-next | Get next task (`/tm-next`) | task-management |
+| tm-review | Task review (`/tm-review`) | task-management |
+| tm-worktree | Task worktree setup (`/tm-worktree`) | task-management |
+| shape | Shape ideas to implementation (`/shape`) | core-workflow |
 | using-superpowers | Mandatory workflows | foundation |
-| verification-before-completion | Verify before claiming done | verification |
+| verify | Verify before claiming done (`/verify`) | verification |
 | verification-runner | Run verification commands | verification |
 | writing-clearly-and-concisely | Apply writing rules | documentation |
-| writing-plans | Create implementation plans | core-workflow |
+| write-plan | Create implementation plans (`/write-plan`) | core-workflow |
 | writing-skills | Create and test skills | core-workflow |
 
 ### Agents (32)
@@ -185,12 +203,16 @@ plugins/
 └── my-plugin/
     ├── .claude-plugin/
     │   └── plugin.json       # Plugin metadata
+    ├── commands/             # Slash commands (optional)
+    │   └── my-command.md
     ├── skills/               # Skill definitions (optional)
     │   └── my-skill.md
     ├── agents/               # Agent definitions (optional)
     │   └── my-agent.md
     └── README.md             # Documentation
 ```
+
+Command-centric plugins bundle both a slash command and its underlying skill together. When you install the plugin, you get both the `/command` and the skill it invokes.
 
 ## Contributing
 

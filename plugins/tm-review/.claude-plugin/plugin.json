@@ -1,0 +1,20 @@
+{
+  "name": "tm-review",
+  "version": "1.0.0",
+  "description": "Dispatch code reviewer subagent to review task implementation",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "task-management",
+  "license": "MIT",
+  "keywords": [
+    "review",
+    "workflow",
+    "task management",
+    "code-review"
+  ],
+  "dependencies": [
+    "security-review"
+  ]
+}

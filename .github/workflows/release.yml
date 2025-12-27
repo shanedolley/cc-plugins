@@ -76,7 +76,7 @@ jobs:
 
           ### Installation
           \`\`\`bash
-          /plugin marketplace add shanedolley/claude-plugins
+          /plugin marketplace add shanedolley/cc-plugins
           \`\`\`
 
           ### Collections

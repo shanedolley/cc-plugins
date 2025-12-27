@@ -1,0 +1,16 @@
+{
+  "name": "execute-plan",
+  "version": "1.0.0",
+  "description": "Use when partner provides a complete implementation plan to execute in controlled batches with review checkpoints - loads plan, reviews critically, executes tasks in batches, reports for review between batches",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "core-workflow",
+  "license": "MIT",
+  "keywords": [
+    "executing",
+    "plans",
+    "core workflow"
+  ]
+}

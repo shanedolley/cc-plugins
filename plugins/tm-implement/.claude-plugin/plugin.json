@@ -1,0 +1,21 @@
+{
+  "name": "tm-implement",
+  "version": "1.0.0",
+  "description": "Dispatch implementation subagent for a task-master task with TDD enforcement for code tasks",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "task-management",
+  "license": "MIT",
+  "keywords": [
+    "implement",
+    "workflow",
+    "task management"
+  ],
+  "dependencies": [
+    "task-classifier",
+    "verification-runner",
+    "test-driven-development"
+  ]
+}

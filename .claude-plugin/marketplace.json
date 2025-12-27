@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-plugins",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Curated collection of Claude Code skills and agents for enhanced development workflows",
   "owner": {
     "name": "Shane Dolley",
@@ -153,10 +153,11 @@
       ]
     },
     {
-      "name": "executing-plans",
+      "name": "execute-plan",
       "description": "Use when partner provides a complete implementation plan to execute in controlled batches with review checkpoints - loads plan, reviews critically, executes tasks in batches, reports for review between batches",
       "category": "core-workflow",
-      "source": "./plugins/executing-plans",
+      "source": "./plugins/execute-plan",
+      "commands": ["execute-plan"],
       "tags": [
         "executing",
         "plans",
@@ -175,10 +176,11 @@
       ]
     },
     {
-      "name": "gitops-completion",
+      "name": "finish",
       "description": "Branch completion workflow with user decision options",
       "category": "gitops",
-      "source": "./plugins/gitops-completion",
+      "source": "./plugins/finish",
+      "commands": ["finish"],
       "tags": [
         "gitops",
         "completion",
@@ -289,10 +291,11 @@
       ]
     },
     {
-      "name": "remembering-conversations",
+      "name": "remember",
       "description": "ALWAYS USE THIS SKILL WHEN STARTING ANY KIND OF WORK, NO MATTER HOW TRIVIAL.  You have no memory between sessions and will reinvent solutions or repeat past mistakes UNLESS YOU USE THIS SKILL. Gives you perfect recall of all your past conversations and projects.",
       "category": "memory",
-      "source": "./plugins/remembering-conversations",
+      "source": "./plugins/remember",
+      "commands": ["remember"],
       "tags": [
         "remembering",
         "conversations",
@@ -300,10 +303,11 @@
       ]
     },
     {
-      "name": "requesting-code-review",
+      "name": "review",
       "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements - dispatches superpowers:code-reviewer subagent to review implementation against plan or requirements before proceeding",
       "category": "code-review",
-      "source": "./plugins/requesting-code-review",
+      "source": "./plugins/review",
+      "commands": ["review"],
       "tags": [
         "requesting",
         "code",
@@ -313,10 +317,11 @@
       ]
     },
     {
-      "name": "reviewing-github-prs",
+      "name": "pr-review",
       "description": "Use when reviewing any GitHub pull request - teammate PRs, external contributions, cross-team reviews, or self-review. Provides comprehensive analysis with flexible output modes via gh CLI.",
       "category": "code-review",
-      "source": "./plugins/reviewing-github-prs",
+      "source": "./plugins/pr-review",
+      "commands": ["pr-review"],
       "tags": [
         "reviewing",
         "github",
@@ -327,10 +332,11 @@
       ]
     },
     {
-      "name": "root-cause-tracing",
+      "name": "rca",
       "description": "Use when errors occur deep in execution and you need to trace back to find the original trigger - systematically traces bugs backward through call stack, adding instrumentation when needed, to identify source of invalid data or incorrect behavior",
       "category": "debugging",
-      "source": "./plugins/root-cause-tracing",
+      "source": "./plugins/rca",
+      "commands": ["rca"],
       "tags": [
         "root",
         "cause",
@@ -373,10 +379,11 @@
       ]
     },
     {
-      "name": "systematic-debugging",
+      "name": "debug",
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes - four-phase framework (root cause investigation, pattern analysis, hypothesis testing, implementation) that ensures understanding before attempting solutions",
       "category": "debugging",
-      "source": "./plugins/systematic-debugging",
+      "source": "./plugins/debug",
+      "commands": ["debug"],
       "tags": [
         "systematic",
         "debugging"
@@ -394,10 +401,11 @@
       ]
     },
     {
-      "name": "taskmaster-workflow",
+      "name": "taskmaster",
       "description": "Initialize task-master and parse PRDs from docs/prds/ into actionable tasks with optional subtask generation",
       "category": "task-management",
-      "source": "./plugins/taskmaster-workflow",
+      "source": "./plugins/taskmaster",
+      "commands": ["taskmaster"],
       "tags": [
         "taskmaster",
         "workflow",
@@ -405,10 +413,11 @@
       ]
     },
     {
-      "name": "test-driven-development",
+      "name": "tdd",
       "description": "Use when implementing any feature or bugfix, before writing implementation code - write the test first, watch it fail, write minimal code to pass; ensures tests actually verify behavior by requiring failure first",
       "category": "development",
-      "source": "./plugins/test-driven-development",
+      "source": "./plugins/tdd",
+      "commands": ["tdd"],
       "tags": [
         "test",
         "driven",
@@ -440,10 +449,11 @@
       ]
     },
     {
-      "name": "tm-execute-workflow",
+      "name": "tm-execute",
       "description": "Orchestrate task-master task execution with TDD, code review, and worktree isolation",
       "category": "task-management",
-      "source": "./plugins/tm-execute-workflow",
+      "source": "./plugins/tm-execute",
+      "commands": ["tm-execute"],
       "tags": [
         "execute",
         "workflow",
@@ -451,10 +461,11 @@
       ]
     },
     {
-      "name": "tm-finish-workflow",
+      "name": "tm-finish",
       "description": "Complete task-master execution - verify, clean up, and handle branch completion",
       "category": "task-management",
-      "source": "./plugins/tm-finish-workflow",
+      "source": "./plugins/tm-finish",
+      "commands": ["tm-finish"],
       "tags": [
         "finish",
         "workflow",
@@ -462,10 +473,11 @@
       ]
     },
     {
-      "name": "tm-implement-workflow",
+      "name": "tm-implement",
       "description": "Dispatch implementation subagent for a task-master task with TDD enforcement for code tasks",
       "category": "task-management",
-      "source": "./plugins/tm-implement-workflow",
+      "source": "./plugins/tm-implement",
+      "commands": ["tm-implement"],
       "tags": [
         "implement",
         "workflow",
@@ -473,10 +485,11 @@
       ]
     },
     {
-      "name": "tm-next-workflow",
+      "name": "tm-next",
       "description": "Get and display the next task from task-master without executing it",
       "category": "task-management",
-      "source": "./plugins/tm-next-workflow",
+      "source": "./plugins/tm-next",
+      "commands": ["tm-next"],
       "tags": [
         "next",
         "workflow",
@@ -484,10 +497,11 @@
       ]
     },
     {
-      "name": "tm-review-workflow",
+      "name": "tm-review",
       "description": "Dispatch code reviewer subagent to review task implementation",
       "category": "task-management",
-      "source": "./plugins/tm-review-workflow",
+      "source": "./plugins/tm-review",
+      "commands": ["tm-review"],
       "tags": [
         "review",
         "workflow",
@@ -496,10 +510,11 @@
       ]
     },
     {
-      "name": "tm-worktree-workflow",
+      "name": "tm-worktree",
       "description": "Set up git worktree for a task-master parent task",
       "category": "task-management",
-      "source": "./plugins/tm-worktree-workflow",
+      "source": "./plugins/tm-worktree",
+      "commands": ["tm-worktree"],
       "tags": [
         "worktree",
         "workflow",
@@ -507,10 +522,11 @@
       ]
     },
     {
-      "name": "unified-shaping-workflow",
+      "name": "shape",
       "description": "Unified workflow for shaping features from idea to implementation - auto-scales discovery process based on complexity (TRIVIAL/SIMPLE/COMPLEX)",
       "category": "core-workflow",
-      "source": "./plugins/unified-shaping-workflow",
+      "source": "./plugins/shape",
+      "commands": ["shape"],
       "tags": [
         "unified",
         "shaping",
@@ -530,10 +546,11 @@
       ]
     },
     {
-      "name": "verification-before-completion",
+      "name": "verify",
       "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
       "category": "verification",
-      "source": "./plugins/verification-before-completion",
+      "source": "./plugins/verify",
+      "commands": ["verify"],
       "tags": [
         "verification",
         "before",
@@ -565,10 +582,11 @@
       ]
     },
     {
-      "name": "writing-plans",
+      "name": "write-plan",
       "description": "Use when design is complete and you need detailed implementation tasks for engineers with zero codebase context - creates comprehensive implementation plans with exact file paths, complete code examples, and verification steps assuming engineer has minimal domain knowledge",
       "category": "core-workflow",
-      "source": "./plugins/writing-plans",
+      "source": "./plugins/write-plan",
+      "commands": ["write-plan"],
       "tags": [
         "writing",
         "plans",
@@ -944,9 +962,9 @@
       "description": "Core development workflow plugins for everyday use",
       "plugins": [
         "developer",
-        "systematic-debugging",
-        "test-driven-development",
-        "requesting-code-review",
+        "debug",
+        "tdd",
+        "review",
         "architect"
       ]
     },
@@ -959,7 +977,7 @@
         "cicd-release",
         "gitops-branching",
         "gitops-worktrees",
-        "gitops-completion",
+        "finish",
         "gitops-engineer"
       ]
     },
@@ -967,10 +985,10 @@
       "name": "testing",
       "description": "Test-driven development and quality assurance plugins",
       "plugins": [
-        "test-driven-development",
+        "tdd",
         "testing-anti-patterns",
         "test-analyst-expert",
-        "verification-before-completion",
+        "verify",
         "verification-runner"
       ]
     },
@@ -978,9 +996,9 @@
       "name": "debugging",
       "description": "Debugging, troubleshooting, and root cause analysis plugins",
       "plugins": [
-        "systematic-debugging",
+        "debug",
         "debugger",
-        "root-cause-tracing",
+        "rca",
         "condition-based-waiting",
         "defense-in-depth"
       ]

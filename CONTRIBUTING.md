@@ -46,9 +46,10 @@ Thank you for your interest in contributing to the Claude Plugins Marketplace! T
    }
    ```
 
-4. **Add your skill/agent**
+4. **Add your skill/agent/command**
    - Skills: `plugins/my-plugin/skills/my-skill.md`
    - Agents: `plugins/my-plugin/agents/my-agent.md`
+   - Commands: `plugins/my-plugin/commands/my-command.md`
 
 5. **Create README.md**
    ```markdown
@@ -133,13 +134,53 @@ capabilities:
 Detailed agent instructions, knowledge, and behavioral guidelines...
 ```
 
+### Command Definition (COMMAND.md)
+
+Commands provide slash command shortcuts:
+
+```markdown
+---
+description: Brief description for command help
+argument-hint: optional argument description
+---
+
+Use your my-skill skill to perform the requested action.
+```
+
+### Command-Centric Plugins
+
+For plugins that provide a workflow, bundle the command and skill together:
+
+```
+plugins/my-workflow/
+├── .claude-plugin/
+│   └── plugin.json
+├── commands/
+│   └── my-workflow.md     # /my-workflow command
+├── skills/
+│   └── my-workflow.md     # Skill it invokes
+└── README.md
+```
+
+The command file should invoke the skill:
+
+```markdown
+---
+description: Run my-workflow with guided steps
+---
+
+Use your my-workflow skill to guide the user through the workflow.
+```
+
+When users install the plugin, they get both `/my-workflow` command and the underlying skill.
+
 ## Submission Process
 
 ### 1. Fork & Clone
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/claude-plugins.git
-cd claude-plugins
+git clone https://github.com/YOUR-USERNAME/cc-plugins.git
+cd cc-plugins
 ```
 
 ### 2. Create Plugin

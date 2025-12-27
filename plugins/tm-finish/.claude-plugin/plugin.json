@@ -1,0 +1,19 @@
+{
+  "name": "tm-finish",
+  "version": "1.0.0",
+  "description": "Complete task-master execution - verify, clean up, and handle branch completion",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "task-management",
+  "license": "MIT",
+  "keywords": [
+    "finish",
+    "workflow",
+    "task management"
+  ],
+  "dependencies": [
+    "verification-runner"
+  ]
+}
