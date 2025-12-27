@@ -40,7 +40,46 @@ Many plugins include slash commands that invoke their skills:
 
 ### Install by Category
 
-To batch-install plugins by category, add the relevant `enabledPlugins` entries to your `~/.claude/settings.json` file.
+Use the `/install-category` command to batch-install all plugins in a category:
+
+```bash
+# First, install the install-category plugin
+/plugin install install-category
+
+# Then use it to install categories
+/install-category plan-implement
+/install-category programming-languages
+/install-category architecture-design
+
+# List available categories
+/install-category list
+
+# Preview what's in a category before installing
+/install-category show plan-implement
+
+# Install ALL plugins at once
+/install-category all
+```
+
+**Available Categories:**
+| Category | Plugins | Key Requirements |
+|----------|---------|------------------|
+| `plan-implement` | 16 | git, task-master, lincli |
+| `programming-languages` | 8 | Language runtimes (go, java, node, python, cargo) |
+| `architecture-design` | 6 | kubectl, helm, docker |
+| `git-version-control` | 9 | git, gh, sops, git-crypt |
+| `debugging-testing` | 11 | None |
+| `code-review-quality` | 7 | git, gh, trivy |
+| `cicd-infrastructure` | 11 | docker, kubectl, terraform, argocd |
+| `data-analytics` | 5 | supabase |
+| `documentation-writing` | 4 | None |
+| `memory-search` | 2 | None |
+| `utility` | 4 | git, npm |
+
+<details>
+<summary><b>Manual Installation (Alternative)</b></summary>
+
+If you prefer to manually configure plugins, add the relevant `enabledPlugins` entries to your `~/.claude/settings.json` file.
 
 #### Plan & Implement (16 plugins)
 
@@ -244,6 +283,8 @@ Requires: `git`, `npm`, `pip`, `cargo`, `go`
   }
 }
 ```
+
+</details>
 
 #### Install All (82 plugins)
 

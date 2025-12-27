@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cc-plugins",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Curated collection of Claude Code skills and agents for enhanced development workflows",
   "owner": {
     "name": "Shane Dolley",
@@ -154,6 +154,21 @@
     }
   },
   "plugins": [
+    {
+      "name": "install-category",
+      "description": "Batch install plugins by category from the cc-plugins marketplace. Use /install-category <name> to install all plugins in a category at once.",
+      "category": "productivity",
+      "source": "./plugins/install-category",
+      "commands": [
+        "./commands/install-category.md"
+      ],
+      "tags": [
+        "install",
+        "category",
+        "batch",
+        "productivity"
+      ]
+    },
     {
       "name": "api-development",
       "description": "Systematic workflows for API design (spec-first), documentation, versioning, and contract testing.",
@@ -1340,6 +1355,7 @@
       "name": "utility",
       "description": "Core development utilities",
       "plugins": [
+        "install-category",
         "developer",
         "subagent-driven-development",
         "performance-profiling"

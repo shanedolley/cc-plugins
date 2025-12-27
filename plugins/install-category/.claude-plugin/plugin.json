@@ -1,0 +1,19 @@
+{
+  "name": "install-category",
+  "version": "1.0.0",
+  "description": "Batch install plugins by category from the cc-plugins marketplace",
+  "author": {
+    "name": "Shane Dolley",
+    "github": "shanedolley"
+  },
+  "category": "productivity",
+  "license": "MIT",
+  "keywords": [
+    "install",
+    "category",
+    "batch",
+    "plugins",
+    "marketplace"
+  ],
+  "dependencies": []
+}
