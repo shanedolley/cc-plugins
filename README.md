@@ -38,67 +38,289 @@ Many plugins include slash commands that invoke their skills:
 /review
 ```
 
-### Install Collections
+### Install Categories
 
-Collections are curated bundles of related plugins:
+Categories are curated bundles of related plugins. Some categories have dependencies that are automatically installed:
 
 ```bash
-# Essential development plugins
-/plugin install collection:essential
+# Plan & Implement (16 plugins + auto-installs git, testing, review dependencies)
+/plugin install collection:plan-implement
 
-# DevOps and CI/CD plugins
-/plugin install collection:devops
+# Programming Languages (8 plugins)
+/plugin install collection:programming-languages
 
-# Testing and quality assurance
-/plugin install collection:testing
+# Architecture & Design (6 plugins)
+/plugin install collection:architecture-design
 
-# Debugging and troubleshooting
-/plugin install collection:debugging
+# Git & Version Control (9 plugins)
+/plugin install collection:git-version-control
+
+# CI/CD & Infrastructure (11 plugins)
+/plugin install collection:cicd-infrastructure
+
+# Code Review & Quality (7 plugins)
+/plugin install collection:code-review-quality
+
+# Debugging & Testing (11 plugins)
+/plugin install collection:debugging-testing
+
+# Data & Analytics (5 plugins)
+/plugin install collection:data-analytics
+
+# Documentation & Writing (4 plugins)
+/plugin install collection:documentation-writing
+
+# Memory & Search (2 plugins)
+/plugin install collection:memory-search
+
+# Utility (3 plugins)
+/plugin install collection:utility
 ```
 
-## Available Collections
+## Available Categories
 
-### Essential
+### Plan & Implement (16 plugins)
 
-Core development workflow plugins for everyday use:
+Planning, execution & task management workflows. **Auto-installs dependencies from:** git-version-control, debugging-testing, code-review-quality
 
-- `developer` - Implements your specs with tests
-- `debug` - Four-phase debugging framework (`/debug`)
-- `tdd` - TDD enforcement RED-GREEN-REFACTOR (`/tdd`)
-- `review` - Code review dispatch (`/review`)
-- `architect` - Analyzes code, designs solutions, writes ADRs
+- `shape` - Shape ideas to implementation (`/shape`)
+- `verify` - Verify before claiming done (`/verify`)
+- `execute-plan` - Execute plans in batches (`/execute-plan`)
+- `write-plan` - Create implementation plans (`/write-plan`)
+- `using-superpowers` - Mandatory skill workflows
+- `task-classifier` - Route tasks to agents
+- `verification-runner` - Run verification commands
+- `taskmaster` - Initialize task-master (`/taskmaster`)
+- `tm-execute` - Task execution orchestration (`/tm-execute`)
+- `tm-implement` - Task implementation (`/tm-implement`)
+- `tm-review` - Task review (`/tm-review`)
+- `tm-finish` - Complete task execution (`/tm-finish`)
+- `tm-next` - Get next task (`/tm-next`)
+- `tm-worktree` - Task worktree setup (`/tm-worktree`)
+- `linear-issue-manager` - Linear issue management
+- `linear-issue-updater` - Update Linear issues
 
-### DevOps
+### Programming Languages (8 plugins)
 
-CI/CD, GitOps, and infrastructure automation:
+Language-specific development experts:
 
-- `cicd-pipelines` - GitHub Actions, Azure Pipelines, Jenkins
-- `cicd-deployments` - Rolling, blue-green, canary deployments
-- `cicd-release` - Tag-triggered release automation
+- `golang-pro` - Go 1.21+ with modern patterns
+- `java-pro` - Java 21+ with virtual threads, Spring Boot 3.x
+- `javascript-pro` - Modern JavaScript ES6+, async patterns
+- `python-pro` - Python 3.12+ with async, production practices
+- `python-architect` - Python design and implementation
+- `rust-pro` - Rust 1.75+ with async, systems programming
+- `typescript-pro` - Advanced types, generics, strict type safety
+- `prompt-engineer` - Advanced prompting techniques
+
+### Architecture & Design (6 plugins)
+
+System design, API architecture & ML engineering:
+
+- `architect` - Lead architect, designs solutions, writes ADRs
+- `architecture-decisions` - ADRs with alternatives analysis
+- `graphql-architect` - GraphQL federation, performance
+- `kubernetes-architect` - K8s, GitOps, cloud-native
+- `api-development` - API design, documentation, versioning
+- `ml-engineer` - Production ML with PyTorch, TensorFlow
+
+### Git & Version Control (9 plugins)
+
+Git operations, branching & release management:
+
+- `gitops-engineer` - Centralized git operations agent
 - `gitops-branching` - Branching strategy selection
+- `gitops-conflicts` - Conflict resolution
+- `gitops-recovery` - Complex git operations (rebase, bisect)
+- `gitops-release` - Release preparation, changelog, tagging
+- `gitops-repo-structure` - Repository structure patterns
+- `gitops-secrets` - Repository secrets with SOPS, GitCrypt
 - `gitops-worktrees` - Isolated git worktrees
 - `finish` - Work completion guidance (`/finish`)
-- `gitops-engineer` - Git operations agent
 
-### Testing
+### CI/CD & Infrastructure (11 plugins)
 
-Test-driven development and quality assurance:
+Pipelines, deployments & infrastructure automation:
 
-- `tdd` - TDD enforcement (`/tdd`)
-- `testing-anti-patterns` - Prevent testing bad practices
-- `test-analyst-expert` - Comprehensive testing analysis
-- `verify` - Verify before claiming done (`/verify`)
-- `verification-runner` - Run verification commands
+- `ci-cd-engineer` - Centralized pipeline/automation agent
+- `cicd-pipelines` - GitHub Actions, Azure Pipelines, Jenkins
+- `cicd-deployments` - Rolling, blue-green, canary
+- `cicd-feature-flags` - Feature flags with PostHog
+- `cicd-gitops-tools` - ArgoCD, Flux configuration
+- `cicd-promotion` - Environment promotion pipelines
+- `cicd-release` - Tag-triggered releases
+- `cicd-secrets-infra` - External Secrets Operator
+- `terraform-specialist` - Terraform/OpenTofu IaC
+- `observability-engineer` - Monitoring, logging, tracing
+- `performance-engineer` - Performance optimization
 
-### Debugging
+### Code Review & Quality (7 plugins)
 
-Debugging, troubleshooting, and root cause analysis:
+Code review workflows & quality assurance:
 
-- `debug` - Evidence-based debugging (`/debug`)
+- `code-reviewer` - Review against plan and standards
+- `pr-review` - GitHub PR review (`/pr-review`)
+- `quality-reviewer` - Reviews for security, performance
+- `review` - Request code review (`/review`)
+- `receiving-code-review` - Handle review feedback
+- `security-auditor` - DevSecOps, compliance frameworks
+- `security-review` - OWASP Top 10, secret detection
+
+### Debugging & Testing (11 plugins)
+
+TDD, debugging & troubleshooting:
+
+- `tdd` - TDD enforcement RED-GREEN-REFACTOR (`/tdd`)
+- `tdd-orchestrator` - Multi-agent TDD coordination
+- `debug` - Four-phase debugging (`/debug`)
 - `debugger` - Complex debugging agent
 - `rca` - Trace bugs to source (`/rca`)
-- `condition-based-waiting` - Fix race conditions
 - `defense-in-depth` - Multi-layer validation
+- `condition-based-waiting` - Fix race conditions
+- `testing-anti-patterns` - Prevent bad testing practices
+- `testing-skills-with-subagents` - Test skills with subagents
+- `error-detective` - Error pattern analysis
+- `test-analyst-expert` - Comprehensive testing analysis
+
+### Data & Analytics (5 plugins)
+
+Data science, database optimization & analytics:
+
+- `data-scientist` - Advanced analytics, ML, statistical modeling
+- `data-analyst-investigator` - Deep analytical investigation
+- `database-optimizer` - Database performance tuning
+- `database-operations` - Schema changes, migrations
+- `inventory-optimizer` - Inventory analysis, supply orders
+
+### Documentation & Writing (4 plugins)
+
+Technical writing & documentation:
+
+- `technical-writer` - Documentation creation
+- `writing-clearly-and-concisely` - Strunk's writing rules
+- `writing-skills` - Create and test skills
+- `sharing-skills` - Contribute skills upstream
+
+### Memory & Search (2 plugins)
+
+Session memory & conversation search:
+
+- `remember` - Session memory (`/remember`)
+- `search-conversations` - Search conversation history
+
+### Utility (3 plugins)
+
+Core development utilities:
+
+- `developer` - Implements specs with tests
+- `subagent-driven-development` - Dispatch subagents per task
+- `performance-profiling` - Performance analysis workflows
+
+## External Dependencies
+
+Some plugins require external tools to be installed. Below is the complete reference.
+
+### Required for All Users
+
+| Tool | Description | Install |
+|------|-------------|---------|
+| `git` | Version control system | https://git-scm.com/downloads |
+
+### Category-Specific Requirements
+
+| Category | Required Tools |
+|----------|---------------|
+| **plan-implement** | `git`, `task-master`, `lincli` |
+| **programming-languages** | `go`, `java`, `mvn`, `gradle`, `node`, `npm`, `python`, `pip`, `poetry`, `cargo` |
+| **architecture-design** | `kubectl`, `helm`, `docker` |
+| **git-version-control** | `git`, `gh`, `sops`, `git-crypt`, `gpg` |
+| **cicd-infrastructure** | `git`, `gh`, `docker`, `kubectl`, `helm`, `argocd`, `flux`, `terraform`, `az`, `actionlint`, `trivy` |
+| **code-review-quality** | `git`, `gh`, `docker`, `trivy` |
+| **debugging-testing** | None |
+| **data-analytics** | `supabase` |
+| **documentation-writing** | None |
+| **memory-search** | None |
+| **utility** | `git`, `npm`, `pip`, `cargo`, `go` |
+
+### Installation Commands
+
+#### Package Managers & Runtimes
+
+```bash
+# Node.js (includes npm)
+# https://nodejs.org or: nvm install node
+
+# Python (includes pip)
+# https://python.org or: pyenv install 3.12
+
+# Go
+# https://go.dev/dl/
+
+# Rust (includes cargo)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Java
+# https://adoptium.net or: sdk install java
+```
+
+#### CLI Tools
+
+```bash
+# GitHub CLI
+brew install gh
+gh auth login  # Required: authorize with GitHub
+
+# Task Master (required for plan-implement)
+npm install -g task-master-ai
+
+# Linear CLI (required for plan-implement)
+git clone https://github.com/shanedolley/lincli
+cd lincli
+make deps
+make build
+make install   # Installs to /usr/local/bin (requires sudo)
+lincli auth    # Required: authorize with Linear
+
+# Supabase CLI (required for data-analytics)
+npm install -g supabase
+```
+
+> **Note:** Both `gh` and `lincli` require authorization before first use. Run `gh auth login` and `lincli auth` respectively to complete setup.
+
+#### Infrastructure Tools
+
+```bash
+# Docker
+# https://docker.com/get-started
+
+# Kubernetes
+brew install kubectl helm kustomize
+
+# GitOps
+brew install argocd
+brew install fluxcd/tap/flux
+
+# Terraform
+brew install terraform
+# or OpenTofu: brew install opentofu
+
+# Azure CLI
+brew install azure-cli
+```
+
+#### Security & Secrets
+
+```bash
+# Secrets management
+brew install sops git-crypt gnupg
+
+# Vulnerability scanning
+brew install trivy grype tfsec
+pip install checkov
+
+# GitHub Actions linting
+brew install actionlint
+```
 
 ## All Plugins
 

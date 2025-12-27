@@ -8,6 +8,151 @@
     "github": "shanedolley",
     "email": "shane@shanedolley.com"
   },
+  "externalDependencies": {
+    "git": {
+      "description": "Version control system",
+      "install": "https://git-scm.com/downloads",
+      "required": true
+    },
+    "gh": {
+      "description": "GitHub CLI for PR and workflow operations",
+      "install": "brew install gh || https://cli.github.com",
+      "postInstall": "gh auth login"
+    },
+    "node": {
+      "description": "Node.js runtime",
+      "install": "https://nodejs.org or nvm install node"
+    },
+    "npm": {
+      "description": "Node.js package manager (included with Node.js)",
+      "install": "Included with Node.js"
+    },
+    "pnpm": {
+      "description": "Fast Node.js package manager",
+      "install": "npm install -g pnpm"
+    },
+    "yarn": {
+      "description": "Node.js package manager",
+      "install": "npm install -g yarn"
+    },
+    "python": {
+      "description": "Python interpreter",
+      "install": "https://python.org or pyenv install"
+    },
+    "pip": {
+      "description": "Python package manager (included with Python)",
+      "install": "Included with Python"
+    },
+    "poetry": {
+      "description": "Python dependency management",
+      "install": "pip install poetry"
+    },
+    "go": {
+      "description": "Go compiler and tools",
+      "install": "https://go.dev/dl/"
+    },
+    "cargo": {
+      "description": "Rust package manager and build tool",
+      "install": "https://rustup.rs"
+    },
+    "java": {
+      "description": "Java runtime and compiler",
+      "install": "https://adoptium.net or sdkman"
+    },
+    "mvn": {
+      "description": "Apache Maven build tool",
+      "install": "brew install maven || https://maven.apache.org"
+    },
+    "gradle": {
+      "description": "Gradle build tool",
+      "install": "brew install gradle || https://gradle.org"
+    },
+    "docker": {
+      "description": "Container runtime",
+      "install": "https://docker.com/get-started"
+    },
+    "kubectl": {
+      "description": "Kubernetes CLI",
+      "install": "brew install kubectl || https://kubernetes.io/docs/tasks/tools/"
+    },
+    "helm": {
+      "description": "Kubernetes package manager",
+      "install": "brew install helm || https://helm.sh"
+    },
+    "kustomize": {
+      "description": "Kubernetes configuration management",
+      "install": "brew install kustomize"
+    },
+    "argocd": {
+      "description": "ArgoCD CLI for GitOps",
+      "install": "brew install argocd"
+    },
+    "flux": {
+      "description": "Flux CLI for GitOps",
+      "install": "brew install fluxcd/tap/flux"
+    },
+    "terraform": {
+      "description": "Infrastructure as Code tool",
+      "install": "brew install terraform || https://terraform.io"
+    },
+    "tofu": {
+      "description": "OpenTofu - Terraform alternative",
+      "install": "brew install opentofu"
+    },
+    "task-master": {
+      "description": "Task management CLI for PRD parsing",
+      "install": "npm install -g task-master-ai"
+    },
+    "lincli": {
+      "description": "Linear CLI for issue management",
+      "install": "git clone https://github.com/shanedolley/lincli && cd lincli && make deps && make build && make install",
+      "postInstall": "lincli auth"
+    },
+    "sops": {
+      "description": "Secrets Operations for encryption",
+      "install": "brew install sops"
+    },
+    "git-crypt": {
+      "description": "Git repository encryption",
+      "install": "brew install git-crypt"
+    },
+    "gpg": {
+      "description": "GNU Privacy Guard for encryption",
+      "install": "brew install gnupg"
+    },
+    "trivy": {
+      "description": "Vulnerability scanner",
+      "install": "brew install trivy"
+    },
+    "grype": {
+      "description": "Vulnerability scanner",
+      "install": "brew install grype"
+    },
+    "tfsec": {
+      "description": "Terraform security scanner",
+      "install": "brew install tfsec"
+    },
+    "checkov": {
+      "description": "IaC security scanner",
+      "install": "pip install checkov"
+    },
+    "supabase": {
+      "description": "Supabase CLI for database operations",
+      "install": "npm install -g supabase"
+    },
+    "az": {
+      "description": "Azure CLI",
+      "install": "brew install azure-cli || https://docs.microsoft.com/cli/azure/install-azure-cli"
+    },
+    "actionlint": {
+      "description": "GitHub Actions linter",
+      "install": "brew install actionlint"
+    },
+    "golangci-lint": {
+      "description": "Go linter aggregator",
+      "install": "brew install golangci-lint"
+    }
+  },
   "plugins": [
     {
       "name": "api-development",
@@ -994,50 +1139,168 @@
   ],
   "collections": [
     {
-      "name": "essential",
-      "description": "Core development workflow plugins for everyday use",
+      "name": "plan-implement",
+      "description": "Planning, execution & task management workflows",
       "plugins": [
-        "developer",
-        "debug",
-        "tdd",
-        "review",
-        "architect"
-      ]
+        "shape",
+        "verify",
+        "execute-plan",
+        "write-plan",
+        "using-superpowers",
+        "task-classifier",
+        "verification-runner",
+        "taskmaster",
+        "tm-execute",
+        "tm-implement",
+        "tm-review",
+        "tm-finish",
+        "tm-next",
+        "tm-worktree",
+        "linear-issue-manager",
+        "linear-issue-updater"
+      ],
+      "dependencies": [
+        "git-version-control",
+        "debugging-testing",
+        "code-review-quality"
+      ],
+      "requirements": ["git", "task-master", "lincli"]
     },
     {
-      "name": "devops",
-      "description": "CI/CD, GitOps, and infrastructure automation plugins",
+      "name": "programming-languages",
+      "description": "Language-specific development experts",
       "plugins": [
+        "golang-pro",
+        "java-pro",
+        "javascript-pro",
+        "python-pro",
+        "python-architect",
+        "rust-pro",
+        "typescript-pro",
+        "prompt-engineer"
+      ],
+      "requirements": ["go", "java", "mvn", "gradle", "node", "npm", "python", "pip", "poetry", "cargo"]
+    },
+    {
+      "name": "architecture-design",
+      "description": "System design, API architecture & ML engineering",
+      "plugins": [
+        "architect",
+        "architecture-decisions",
+        "graphql-architect",
+        "kubernetes-architect",
+        "api-development",
+        "ml-engineer"
+      ],
+      "requirements": ["kubectl", "helm", "docker"]
+    },
+    {
+      "name": "git-version-control",
+      "description": "Git operations, branching & release management",
+      "plugins": [
+        "gitops-engineer",
+        "gitops-branching",
+        "gitops-conflicts",
+        "gitops-recovery",
+        "gitops-release",
+        "gitops-repo-structure",
+        "gitops-secrets",
+        "gitops-worktrees",
+        "finish"
+      ],
+      "requirements": ["git", "gh", "sops", "git-crypt", "gpg"]
+    },
+    {
+      "name": "cicd-infrastructure",
+      "description": "Pipelines, deployments & infrastructure automation",
+      "plugins": [
+        "ci-cd-engineer",
         "cicd-pipelines",
         "cicd-deployments",
+        "cicd-feature-flags",
+        "cicd-gitops-tools",
+        "cicd-promotion",
         "cicd-release",
-        "gitops-branching",
-        "gitops-worktrees",
-        "finish",
-        "gitops-engineer"
-      ]
+        "cicd-secrets-infra",
+        "terraform-specialist",
+        "observability-engineer",
+        "performance-engineer"
+      ],
+      "requirements": ["git", "gh", "docker", "kubectl", "helm", "argocd", "flux", "terraform", "az", "actionlint", "trivy"]
     },
     {
-      "name": "testing",
-      "description": "Test-driven development and quality assurance plugins",
+      "name": "code-review-quality",
+      "description": "Code review workflows & quality assurance",
+      "plugins": [
+        "code-reviewer",
+        "pr-review",
+        "quality-reviewer",
+        "review",
+        "receiving-code-review",
+        "security-auditor",
+        "security-review"
+      ],
+      "requirements": ["git", "gh", "docker", "trivy"]
+    },
+    {
+      "name": "debugging-testing",
+      "description": "TDD, debugging & troubleshooting",
       "plugins": [
         "tdd",
-        "testing-anti-patterns",
-        "test-analyst-expert",
-        "verify",
-        "verification-runner"
-      ]
-    },
-    {
-      "name": "debugging",
-      "description": "Debugging, troubleshooting, and root cause analysis plugins",
-      "plugins": [
+        "tdd-orchestrator",
         "debug",
         "debugger",
         "rca",
+        "defense-in-depth",
         "condition-based-waiting",
-        "defense-in-depth"
-      ]
+        "testing-anti-patterns",
+        "testing-skills-with-subagents",
+        "error-detective",
+        "test-analyst-expert"
+      ],
+      "requirements": []
+    },
+    {
+      "name": "data-analytics",
+      "description": "Data science, database optimization & analytics",
+      "plugins": [
+        "data-scientist",
+        "data-analyst-investigator",
+        "database-optimizer",
+        "database-operations",
+        "inventory-optimizer"
+      ],
+      "requirements": ["supabase"]
+    },
+    {
+      "name": "documentation-writing",
+      "description": "Technical writing & documentation",
+      "plugins": [
+        "technical-writer",
+        "writing-clearly-and-concisely",
+        "writing-skills",
+        "sharing-skills"
+      ],
+      "requirements": []
+    },
+    {
+      "name": "memory-search",
+      "description": "Session memory & conversation search",
+      "plugins": [
+        "remember",
+        "search-conversations"
+      ],
+      "requirements": []
+    },
+    {
+      "name": "utility",
+      "description": "Core development utilities",
+      "plugins": [
+        "developer",
+        "subagent-driven-development",
+        "performance-profiling"
+      ],
+      "requirements": ["git", "npm", "pip", "cargo", "go"]
     }
   ]
 }
